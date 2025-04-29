@@ -28,7 +28,7 @@ const YukinaConfig: Configuration = {
   ],
 
   username: "Raptors Morelia",
-  sign: "Siguenos",
+  sign: "Unete!",
   avatarUrl: "https://i.postimg.cc/YCVSV8Xq/Raptors-2510.png",
   socialLinks: [
     {
@@ -38,6 +38,10 @@ const YukinaConfig: Configuration = {
     {
       icon: "line-md:instagram",
       link: "https://www.instagram.com/raptorsmorelia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    },
+    {
+      icon: "mingcute:whatsapp-line",
+      link: "https://wa.me/524433721771?text=Hola%2C%20encontr%C3%A9%20a%20los%20Raptors%20en%20la%20web%20y%20me%20gustar%C3%ADa%20rodar%20con%20ustedes",
     },
   ],
   maxSidebarCategoryChip: 6, // It is recommended to set it to a common multiple of 2 and 3
