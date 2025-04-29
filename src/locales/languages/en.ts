@@ -6,9 +6,9 @@ export const en: Translation = {
   [key.copy_right_publish_date]: "Publish Date",
   [key.copy_right_license]: "License",
 
-  [key.nav_bar_home]: "Home",
-  [key.nav_bar_archive]: "Archive",
-  [key.nav_bar_about]: "About",
+  [key.nav_bar_home]: "Inicio",
+  [key.nav_bar_archive]: "Archivo",
+  [key.nav_bar_about]: "Rueda con nosotros",
   [key.nav_bar_github]: "GitHub",
   [key.nav_bar_search_placeholder]: "Search",
 

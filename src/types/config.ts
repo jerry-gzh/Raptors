@@ -4,6 +4,7 @@ interface Configuration {
   title: string;
   subTitle: string;
   brandTitle: string;
+  countdown: string;
 
   description: string;
 
