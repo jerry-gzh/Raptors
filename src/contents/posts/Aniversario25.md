@@ -46,7 +46,7 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 ---
 
 ## Ruta corta 
-<iframe width="100%" height="450vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1sPmrxdh4FMiUQV8i5ZHtEVqoFSV6oNY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=150&c=19.637342,-101.110263&z=15"></iframe>
+<iframe width="100%" height="450vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1sPmrxdh4FMiUQV8i5ZHtEVqoFSV6oNY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=130&c=19.637342,-101.110263&z=15&az=1"></iframe>
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
   <a href="https://raw.githubusercontent.com/USUARIO/REPO/rama/ruta/al/archivo.ext" download style="
@@ -89,7 +89,16 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 ## Ruta larga
 
 
-<iframe width="100%" height="450vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=150&c=19.627107,-101.128721&z=14"></iframe>
+<iframe width="100%" height="450vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=130&c=19.627107,-101.128721&z=14&az=1"></iframe>
+
+<div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0;">
+  <iframe 
+    src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=130&c=19.627107,-101.128721&z=14&az=1" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
 
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
@@ -128,3 +137,12 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 * Cañada Rio Bello
 * Pista San Jose
 * Climb Emiliano Zapata
+
+## Entraga de Kits
+
+* Fecha: Sabado 24 Mayo
+* Lugar: Por confirmar 
+* Hora: Por confirmar
+
+
+## Patrocinadores
