@@ -10,7 +10,10 @@ draft: false
 
 # Rodada de aniversario
 
-Nuestra mejor forma de celebrar el aniversario del equipo es con lo que mejor sabemos hacer ¡Rodando! por eso invitamos a todos los miembros y amigos del equipo a acompañarnos en este especial evento.
+Nuestra mejor forma de celebrar el aniversario del equipo es haciendo lo que mejor sabemos hacer: ¡Rodar! Por eso, invitamos a todos los miembros y amigos del equipo a acompañarnos en este evento tan especial.
+
+La rodada de aniversario será el domingo 25 de mayo, y arrancamos a las 7:30 a.m. desde Casa San José.
+¡Prepárate, queda poco tiempo!
 
 La rodada de aniversario será el día Domingo 25 de Mayo y arrancamos a las 7:30 a.m. desde [*Casa San José*](https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8), preparate, queda poco tiempo. 
 
@@ -18,15 +21,16 @@ La rodada de aniversario será el día Domingo 25 de Mayo y arrancamos a las 7:3
 
 ## Mapa general
 
-En esta versión ofrecemos dos rutas para distintos niveles. Te compartimos todos los detalles de ambas para que elijas la de tu preferencia, en ambas la diversión está garantizada. 
+En esta edición ofrecemos dos rutas para distintos niveles. Te compartimos todos los detalles de ambas para que elijas la que más te convenga. En cualquiera de las dos, la diversión está garantizada.
 
 <iframe width="100%" height="340vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1_3h34WQVEJ2JkMGqEOsIPBPHcQIIEQ4%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&epw=1&eph=250&center=19.634405,-101.128758&zoom=14" ></iframe>
 
-El punto de partida para la ruta corta y larga es el mismo. 
+El punto de partida para ambas rutas, corta y larga, es el mismo.
 
 #### Ubicación salon y estacionamiento
 
-El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia se realizarán en la misma zona del salón [*Casa San José*](https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8), que está ubicado a un costado de la laguna de San José de las Torres. Te compartimos la ubicación del lugar para facilitar tu llegada: 
+El estacionamiento de los vehículos, el punto de partida/meta y la convivencia se llevarán a cabo en la misma zona del salón  [*Casa San José*](https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8), ubicado a un costado de la laguna de San José de las Torres.
+Te compartimos la ubicación para facilitar tu llegada:
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
   <a href="https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8"" target="_blank" style="
@@ -91,16 +95,6 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 
 <iframe width="100%" height="450vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=130&c=19.627107,-101.128721&z=14&az=1"></iframe>
 
-<div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0;">
-  <iframe 
-    src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=130&c=19.627107,-101.128721&z=14&az=1" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    allowfullscreen
-    loading="lazy">
-  </iframe>
-</div>
-
-
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
   <a href="https://drive.google.com/file/d/14NZr7zXQcbmBN-On-Rg794jdcrYGI0Xh/view?usp=sharing" download style="
     background-color: #FC3941;
@@ -143,6 +137,7 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 * Fecha: Sabado 24 Mayo
 * Lugar: Por confirmar 
 * Hora: Por confirmar
+* Requisitos: Por confirmar
 
 
 ## Patrocinadores
