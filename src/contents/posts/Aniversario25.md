@@ -20,7 +20,7 @@ La rodada de aniversario será el día Domingo 25 de Mayo y arrancamos a las 7:3
 
 En esta versión ofrecemos dos rutas para distintos niveles. Te compartimos todos los detalles de ambas para que elijas la de tu preferencia, en ambas la diversión está garantizada. 
 
-<iframe width="100%" height="400" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1_3h34WQVEJ2JkMGqEOsIPBPHcQIIEQ4%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&epw=1&eph=250&center=19.634405,-101.128758&zoom=14" ></iframe>
+<iframe width="100%" height="300" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1_3h34WQVEJ2JkMGqEOsIPBPHcQIIEQ4%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&epw=1&eph=250&center=19.634405,-101.128758&zoom=14" ></iframe>
 
 El punto de partida para la ruta corta y larga es el mismo. 
 
@@ -46,7 +46,7 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 ---
 
 ## Ruta corta 
-<iframe width="100%" height="700" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1sPmrxdh4FMiUQV8i5ZHtEVqoFSV6oNY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=175&c=19.635321,-101.110263&z=15&az=1"></iframe>
+<iframe width="100%" height="400" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1sPmrxdh4FMiUQV8i5ZHtEVqoFSV6oNY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=175&c=19.635321,-101.110263&z=15&az=1"></iframe>
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
   <a href="https://raw.githubusercontent.com/USUARIO/REPO/rama/ruta/al/archivo.ext" download style="
@@ -89,7 +89,7 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 ## Ruta larga
 
 
-<iframe width="100%" height="700" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=175&c=19.626121,-101.128758&z=14"></iframe>
+<iframe width="100%" height="400" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=175&c=19.626121,-101.128758&z=14"></iframe>
 
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
