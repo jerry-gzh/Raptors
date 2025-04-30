@@ -28,15 +28,18 @@ El punto de partida para la ruta corta y larga es el mismo.
 
 El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia se realizarán en la misma zona del salón [*Casa San José*](https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8), que está ubicado a un costado de la laguna de San José de las Torres. Te compartimos la ubicación del lugar para facilitar tu llegada: 
 
-<div style="text-align: center; margin-top: 2vh;">
-  <a href="https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8" target="_blank" style="
+<div style="display: flex; justify-content: center; margin-top: 2vh;">
+  <a href="https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8"" target="_blank" style="
     background-color: #489A47;
     color: white !important;
-    padding: 0.4em 10em;  /* menor altura, buena anchura */
+    padding: 0.5rem 15vw;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
   ">Ubicación</a>
 </div>
 
@@ -45,15 +48,18 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 ## Ruta corta 
 <iframe width="100%" height="700" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1sPmrxdh4FMiUQV8i5ZHtEVqoFSV6oNY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=175&c=19.635321,-101.110263&z=15&az=1"></iframe>
 
-<div style="text-align: center; margin-top: 2vh;">
-  <a href="https://drive.google.com/file/d/14NZr7zXQcbmBN-On-Rg794jdcrYGI0Xh/view?usp=sharing" download style="
+<div style="display: flex; justify-content: center; margin-top: 2vh;">
+  <a href="https://raw.githubusercontent.com/USUARIO/REPO/rama/ruta/al/archivo.ext" download style="
     background-color: #0F73C6;
     color: white !important;
-    padding: 0.3em 10em;  /* menor altura, buena anchura */
+    padding: 0.5rem 15vw;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
   ">Descarga GPX</a>
 </div>
 
@@ -85,15 +91,19 @@ El estacionamiento de los vehiculos, el punto de partida / meta y la convivencia
 
 <iframe width="100%" height="700" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=1&wl=0&wlw=200&wlh=200&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=175&c=19.626121,-101.128758&z=14"></iframe>
 
-<div style="text-align: center; margin-top: 2vh;">
+
+<div style="display: flex; justify-content: center; margin-top: 2vh;">
   <a href="https://drive.google.com/file/d/14NZr7zXQcbmBN-On-Rg794jdcrYGI0Xh/view?usp=sharing" download style="
     background-color: #FC3941;
     color: white !important;
-    padding: 0.3em 10em;  /* menor altura, buena anchura */
+    padding: 0.5rem 15vw;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
   ">Descarga GPX</a>
 </div>
 
