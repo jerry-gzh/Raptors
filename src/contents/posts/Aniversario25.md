@@ -1,6 +1,6 @@
 ---
-title: Aniversario Raptors
-published: 2025-04-02
+title: 2° Aniversario Raptors
+published: 2025-05-25
 description: Domingo 25 de Mayo 
 licenseName: "RaptorsMLM"
 author: Jerry

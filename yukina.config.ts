@@ -52,11 +52,11 @@ const YukinaConfig: Configuration = {
   banners: [
     "https://i.postimg.cc/fTyJ16nb/Primera-en-la-rana.jpg",
     "https://i.postimg.cc/wMYTBPhw/Grupal24.jpg",
+    "https://i.postimg.cc/mgJd0SCK/Cesar.jpg",
     "https://i.postimg.cc/SKtjPNZV/Retocaja24.jpg",
     "https://i.postimg.cc/pVJ6pzMn/Beto.jpg",
-    "https://i.postimg.cc/mgJd0SCK/Cesar.jpg",
-    "https://i.postimg.cc/Qx6YqDt8/Hermanos.jpg",
     "https://i.postimg.cc/jSLgg1wz/Luis-Abraham.jpg",
+    //"https://i.postimg.cc/Qx6YqDt8/Hermanos.jpg",
   ],
 
   slugMode: "HASH", // 'RAW' | 'HASH'
