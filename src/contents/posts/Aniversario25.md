@@ -184,6 +184,10 @@ Te compartimos la ubicación para facilitar tu llegada:
     transform: translateX(-200%);
   }
 
+  #slide4:checked ~ .carousel-slides {
+    transform: translateX(-300%);
+  }
+
   .carousel-nav {
     text-align: center;
     margin-top: 10px;
@@ -206,7 +210,7 @@ Te compartimos la ubicación para facilitar tu llegada:
   .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 380px; /* Ajuste de centrado */
     margin: auto;
     overflow: hidden;
   }
@@ -229,14 +233,17 @@ Te compartimos la ubicación para facilitar tu llegada:
   object-fit: cover;
 }
 
-  @keyframes slide {
-    0% { transform: translateX(0%); }
-    33.33% { transform: translateX(0%); }
-    38.33% { transform: translateX(-100%); }
-    66.66% { transform: translateX(-100%); }
-    71.66% { transform: translateX(-200%); }
-    100% { transform: translateX(-200%); }
-  }
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  25% { transform: translateX(0%); }
+  30% { transform: translateX(-100%); }
+  55% { transform: translateX(-100%); }
+  60% { transform: translateX(-200%); }
+  85% { transform: translateX(-200%); }
+  90% { transform: translateX(-300%); }
+  100% { transform: translateX(-300%); }
+}
+
 </style>
 
 <div class="carousel-container">
@@ -257,7 +264,7 @@ Te compartimos la ubicación para facilitar tu llegada:
       </a>
     </div>
     <div class="carousel-slide">
-      <a href="https://www.instagram.com/ruben_guidotattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+      <a href="https://www.facebook.com/share/1AGacbgj9t/" target="_blank">
         <img src="/D.jpg" alt="Bici Cine">
       </a>
     </div>
