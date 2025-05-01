@@ -53,7 +53,7 @@ Te compartimos la ubicación para facilitar tu llegada:
 <iframe width="100%" height="450vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1sPmrxdh4FMiUQV8i5ZHtEVqoFSV6oNY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=130&c=19.637342,-101.110263&z=15&az=1"></iframe>
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
-  <a href="https://raw.githubusercontent.com/USUARIO/REPO/rama/ruta/al/archivo.ext" download style="
+  <a href="https://gist.github.com/jerry-gzh/29b1fd8a889fcc1d48892972b932df9f.js" download style="
     background-color: #0F73C6;
     color: white !important;
     padding: 0.5rem 15vw;
