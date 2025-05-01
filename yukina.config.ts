@@ -6,7 +6,7 @@ const YukinaConfig: Configuration = {
   subTitle: "Segundo aniversario 25 Mayo",
   brandTitle: "Raptors",
 
-  description: "Demo Site",
+  description: "Rueda con nosotros en nuestro 2° Aniversario",
 
   site: "https://raptors-one.vercel.app",
 
