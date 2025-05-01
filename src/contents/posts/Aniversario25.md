@@ -53,7 +53,7 @@ Te compartimos la ubicación para facilitar tu llegada:
 <iframe width="100%" height="450vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1sPmrxdh4FMiUQV8i5ZHtEVqoFSV6oNY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=130&c=19.637342,-101.110263&z=15&az=1"></iframe>
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
-  <a href="https://githubusercontent.com/jerry-gzh/Raptors/public/RUTA%20CORTA%20Anv25.gpx" download style="
+  <a href="https://drive.google.com/uc?export=download&id=14NZr7zXQcbmBN-On-Rg794jdcrYGI0Xh" download style="
     background-color: #0F73C6;
     color: white !important;
     padding: 0.5rem 15vw;
@@ -96,7 +96,7 @@ Te compartimos la ubicación para facilitar tu llegada:
 <iframe width="100%" height="450vh" src="https://www.gpsvisualizer.com/atlas/map?url=https%3A//www.google.com/maps/d/u/0/edit%3Fmid%3D1CIlWEzkm_lo_6bFbZS59AdCFe_fzHMY%26usp%3Dsharing&zc=s&cc=0&mc=0&gl=0&tl=0&wl=0&ti=Puntos%20de%20inter%E9s&sb=0&bg=m&tw=0.5&to=0.5&wlb=1&ep=1&epw=1&eph=130&c=19.627107,-101.128721&z=14&az=1"></iframe>
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
-  <a href="https://drive.google.com/file/d/14NZr7zXQcbmBN-On-Rg794jdcrYGI0Xh/view?usp=sharing" download style="
+  <a href="https://drive.google.com/uc?export=download&id=14NZr7zXQcbmBN-On-Rg794jdcrYGI0Xh" download style="
     background-color: #FC3941;
     color: white !important;
     padding: 0.5rem 15vw;
