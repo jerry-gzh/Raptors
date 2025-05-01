@@ -141,3 +141,125 @@ Te compartimos la ubicación para facilitar tu llegada:
 
 
 ## Patrocinadores
+
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  input[name="carousel"] {
+    display: none;
+  }
+
+  #slide1:checked ~ .carousel-slides {
+    transform: translateX(0%);
+  }
+
+  #slide2:checked ~ .carousel-slides {
+    transform: translateX(-100%);
+  }
+
+  #slide3:checked ~ .carousel-slides {
+    transform: translateX(-200%);
+  }
+
+  .carousel-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .carousel-nav label {
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #ccc;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+
+  .carousel-nav label:hover {
+    background: #999;
+  }
+</style>
+
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-slides {
+    display: flex;
+    width: 300%;
+    animation: slide 15s infinite;
+  }
+
+  .carousel-slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+.carousel-slide img {
+  width: 100%;
+  max-width: 350px; /* Cambia este valor para controlar el tamaño máximo */
+  aspect-ratio: 1 / 1; /* Mantiene forma cuadrada */
+  object-fit: cover;
+}
+
+  @keyframes slide {
+    0% { transform: translateX(0%); }
+    33.33% { transform: translateX(0%); }
+    38.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-100%); }
+    71.66% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+  }
+</style>
+
+<div class="carousel-container">
+  <div class="carousel-slides">
+    <div class="carousel-slide">
+      <a href="https://www.cajamorelia.com.mx" target="_blank">
+        <img src="/A.jpg" alt="Caja MV">
+      </a>
+    </div>
+    <div class="carousel-slide">
+      <a href="https://www.facebook.com/profile.php?id=100063507491055" target="_blank">
+        <img src="/B.jpg" alt="Nova">
+      </a>
+    </div>
+    <div class="carousel-slide">
+      <a href="https://www.instagram.com/ruben_guidotattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <img src="/C.jpg" alt="Omentes">
+      </a>
+    </div>
+    <div class="carousel-slide">
+      <a href="https://www.instagram.com/ruben_guidotattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <img src="/D.jpg" alt="Bici Cine">
+      </a>
+    </div>
+  </div>
+</div>
