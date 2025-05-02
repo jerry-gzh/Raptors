@@ -12,10 +12,9 @@ draft: false
 
 Nuestra mejor forma de celebrar el aniversario del equipo es haciendo lo que mejor sabemos hacer: ¡Rodar! Por eso, invitamos a todos los miembros y amigos del equipo a acompañarnos en este evento tan especial.
 
-La rodada de aniversario será el domingo 25 de mayo, y arrancamos a las 7:30 a.m. desde Casa San José.
-¡Prepárate, queda poco tiempo!
+La rodada de aniversario será el domingo 25 de mayo, y arrancamos a las 7:30 a.m. desde [*Casa San José*](https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8).  
 
-La rodada de aniversario será el día Domingo 25 de Mayo y arrancamos a las 7:30 a.m. desde [*Casa San José*](https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8), preparate, queda poco tiempo. 
+¡Prepárate, queda poco tiempo!
 
 <div style="left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto"><iframe src="https://www.tickcounter.com/widget/countdown/7203031" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden" title="2° Aniversario"></iframe></div>
 
