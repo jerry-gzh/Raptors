@@ -8,7 +8,7 @@ const YukinaConfig: Configuration = {
 
   description: "Rueda con nosotros en nuestro 2° Aniversario",
 
-  site: "https://raptors-one.vercel.app",
+  site: "https://raptorsmorelia.com/",
 
   locale: "en", // set for website language and date format
 
