@@ -12,7 +12,7 @@ draft: false
 
 Nuestra mejor forma de celebrar el aniversario del equipo es haciendo lo que mejor sabemos hacer: ¡Rodar! Por eso, invitamos a todos los miembros y amigos del equipo a acompañarnos en este evento tan especial.
 
-La rodada de aniversario será el domingo 25 de mayo, y arrancamos a las 7:30 a.m. desde [*Casa San José*](https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8).  
+La rodada de aniversario será el domingo 25 de mayo, y arrancamos a las 7:30 a.m. desde [*Cabañas San José*](https://maps.app.goo.gl/8voTRoAjAVosSDfTA?g_st=awb).  
 
 ¡Prepárate, queda poco tiempo!
 
@@ -28,11 +28,11 @@ El punto de partida para ambas rutas, corta y larga, es el mismo.
 
 #### Ubicación salon y estacionamiento
 
-El estacionamiento de los vehículos, el punto de partida/meta y la convivencia se llevarán a cabo en la misma zona del salón  [*Casa San José*](https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8), ubicado a un costado de la laguna de San José de las Torres.
+El punto de partida/meta y la convivencia se llevarán a cabo en la misma zona de [*Cabañas San José*](https://maps.app.goo.gl/8voTRoAjAVosSDfTA?g_st=awb), ubicado a unos metros pasando El patieson bike park y el restaurante "Puesta del Sol".
 Te compartimos la ubicación para facilitar tu llegada:
 
 <div style="display: flex; justify-content: center; margin-top: 2vh;">
-  <a href="https://maps.app.goo.gl/MCYLzEUFr9N6jSHh8"" target="_blank" style="
+  <a href="https://maps.app.goo.gl/8voTRoAjAVosSDfTA?g_st=awb)"" target="_blank" style="
     background-color: #489A47;
     color: white !important;
     padding: 0.5rem 15vw;
@@ -265,9 +265,70 @@ Te compartimos la ubicación para facilitar tu llegada:
         <img src="/C.jpg" alt="Omentes">
       </a>
     </div>
-    <div class="carousel-slide">
-      <a href="https://www.facebook.com/share/1AGacbgj9t/" target="_blank">
-        <img src="/D.jpg" alt="Bici Cine">
+        <div class="carousel-slide">
+      <a href="https://www.instagram.com/ruben_guidotattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <img src="/D.jpg" alt="Omentes">
+      </a>
+    </div>
+  </div>
+</div>
+
+## Colaboradores
+
+<!-- Carousel personalizado con 3 imágenes (carousel-1) -->
+<style>
+  .carousel-container-1 {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-slides-1 {
+    display: flex;
+    width: 300%;
+    animation: slide-1 15s infinite;
+  }
+
+  .carousel-slide-1 {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .carousel-slide-1 img {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  @keyframes slide-1 {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(0%); }
+    30% { transform: translateX(-100%); }
+    55% { transform: translateX(-100%); }
+    60% { transform: translateX(-200%); }
+    85% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+  }
+</style>
+
+<div class="carousel-container-1">
+  <div class="carousel-slides-1">
+    <div class="carousel-slide-1">
+      <a href="https://example.com/uno" target="_blank">
+        <img src="/Z1.jpg" alt="Imagen 1">
+      </a>
+    </div>
+    <div class="carousel-slide-1">
+      <a href="https://example.com/dos" target="_blank">
+        <img src="/Z2.jpg" alt="Imagen 2">
+      </a>
+    </div>
+    <div class="carousel-slide-1">
+      <a href="https://example.com/tres" target="_blank">
+        <img src="/Z3.jpg" alt="Imagen 3">
       </a>
     </div>
   </div>
