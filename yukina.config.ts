@@ -43,6 +43,10 @@ const YukinaConfig: Configuration = {
       icon: "mingcute:whatsapp-line",
       link: "https://wa.me/524433721771?text=Hola%2C%20encontr%C3%A9%20a%20los%20Raptors%20en%20la%20web%20y%20me%20gustar%C3%ADa%20rodar%20con%20ustedes",
     },
+    {
+      icon: "fa-brands:strava",
+      link: "https://l.instagram.com/?u=https%3A%2F%2Fstrava.app.link%2FuBxLxtm7BQb%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAacMZVuTFBEsmzOhLyNPBUCz17VkjV_GpNWfA1x2GRULXKc8nEU-wO5v9ht1XA_aem_yrgZOtU0gO-NWzxY4SlEgg&e=AT1kBzv8ul-Xmf07TZk5L9hnhK4kbNL9vpgbjf0NPJhNaShJIXZjikXmPowePWcnz7q2sQ9KAaUvKG5eO3gWO8fxtFk68MUJUSMyaPjsBO3eT4Krp1LbtgU",
+    },
   ],
   maxSidebarCategoryChip: 6, // It is recommended to set it to a common multiple of 2 and 3
   maxSidebarTagChip: 12,
