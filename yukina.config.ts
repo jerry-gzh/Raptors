@@ -10,7 +10,7 @@ const YukinaConfig: Configuration = {
 
   site: "https://raptorsmorelia.com/",
 
-  locale: "en", // set for website language and date format
+  locale: "es", // set for website language and date format
 
   navigators: [
     {

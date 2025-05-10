@@ -220,7 +220,7 @@ Te compartimos la ubicación para facilitar tu llegada:
   .carousel-slides {
     display: flex;
     width: 300%;
-    animation: slide 15s infinite;
+    animation: slide 20s infinite;
   }
 
   .carousel-slide {
@@ -236,14 +236,15 @@ Te compartimos la ubicación para facilitar tu llegada:
 }
 
 @keyframes slide {
-  0% { transform: translateX(0%); }
-  25% { transform: translateX(0%); }
-  30% { transform: translateX(-100%); }
-  55% { transform: translateX(-100%); }
-  60% { transform: translateX(-200%); }
-  85% { transform: translateX(-200%); }
-  90% { transform: translateX(-300%); }
-  100% { transform: translateX(-300%); }
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
 }
 
 </style>
@@ -266,8 +267,8 @@ Te compartimos la ubicación para facilitar tu llegada:
       </a>
     </div>
         <div class="carousel-slide">
-      <a href="https://www.instagram.com/ruben_guidotattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-        <img src="/D.jpg" alt="Omentes">
+      <a href="https://maps.app.goo.gl/8voTRoAjAVosSDfTA?g_st=awb" target="_blank">
+        <img src="/D.jpg" alt="Cabañas SJ">
       </a>
     </div>
   </div>
@@ -275,7 +276,7 @@ Te compartimos la ubicación para facilitar tu llegada:
 
 ## Colaboradores
 
-<!-- Carousel personalizado con 3 imágenes (carousel-1) -->
+<!-- Carousel personalizado con 4 imágenes (carousel-1) -->
 <style>
   .carousel-container-1 {
     position: relative;
@@ -287,8 +288,8 @@ Te compartimos la ubicación para facilitar tu llegada:
 
   .carousel-slides-1 {
     display: flex;
-    width: 300%;
-    animation: slide-1 15s infinite;
+    width: 400%;
+    animation: slide-1 20s infinite;
   }
 
   .carousel-slide-1 {
@@ -305,11 +306,13 @@ Te compartimos la ubicación para facilitar tu llegada:
 
   @keyframes slide-1 {
     0% { transform: translateX(0%); }
-    25% { transform: translateX(0%); }
-    30% { transform: translateX(-100%); }
-    55% { transform: translateX(-100%); }
-    60% { transform: translateX(-200%); }
-    85% { transform: translateX(-200%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
     100% { transform: translateX(0%); }
   }
 </style>
@@ -318,18 +321,24 @@ Te compartimos la ubicación para facilitar tu llegada:
   <div class="carousel-slides-1">
     <div class="carousel-slide-1">
       <a href="https://example.com/uno" target="_blank">
-        <img src="/Z1.jpg" alt="Imagen 1">
+        <img src="/Z1.jpg" alt="DKP">
       </a>
     </div>
     <div class="carousel-slide-1">
       <a href="https://example.com/dos" target="_blank">
-        <img src="/Z2.jpg" alt="Imagen 2">
+        <img src="/Z2.jpg" alt="Cuervos">
       </a>
     </div>
     <div class="carousel-slide-1">
       <a href="https://example.com/tres" target="_blank">
-        <img src="/Z3.jpg" alt="Imagen 3">
+        <img src="/Z3.jpg" alt="Cuarenta+10">
+      </a>
+    </div>
+    <div class="carousel-slide-1">
+      <a href="https://example.com/cuatro" target="_blank">
+        <img src="/Z4.jpg" alt="BiciCine">
       </a>
     </div>
   </div>
+</div>
 </div>
