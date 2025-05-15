@@ -40,6 +40,10 @@ const YukinaConfig: Configuration = {
       link: "https://www.instagram.com/raptorsmorelia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     },
     {
+      icon: "mingcute:tiktok-line",
+      link: "https://www.tiktok.com/@raptorsmorelia?_t=ZS-8wItHkPBWop&_r=1",
+    },
+    {
       icon: "mingcute:whatsapp-line",
       link: "https://wa.me/524433721771?text=Hola%2C%20encontr%C3%A9%20a%20los%20Raptors%20en%20la%20web%20y%20me%20gustar%C3%ADa%20rodar%20con%20ustedes",
     },
