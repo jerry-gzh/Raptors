@@ -49,7 +49,7 @@ const YukinaConfig: Configuration = {
     },
     {
       icon: "fa-brands:strava",
-      link: "https://l.instagram.com/?u=https%3A%2F%2Fstrava.app.link%2FuBxLxtm7BQb%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAacMZVuTFBEsmzOhLyNPBUCz17VkjV_GpNWfA1x2GRULXKc8nEU-wO5v9ht1XA_aem_yrgZOtU0gO-NWzxY4SlEgg&e=AT1kBzv8ul-Xmf07TZk5L9hnhK4kbNL9vpgbjf0NPJhNaShJIXZjikXmPowePWcnz7q2sQ9KAaUvKG5eO3gWO8fxtFk68MUJUSMyaPjsBO3eT4Krp1LbtgU",
+      link: "https://www.strava.com/clubs/1343486?utm_source=android_share&utm_medium=social&share_sig=DY3OEVKS1738352717&fbclid=PAZXh0bgNhZW0CMTEAAacXBRuyqYmHYJjZuo-d6psO2aIDBtokLoeOMbUHsasZxjoYlO88bxEE10fOZw_aem_MYNkCc5DFaLkxI2SVYmZsw&_branch_match_id=1386245111320489091&_branch_referrer=H4sIAAAAAAAAAwXB2w6CIAAA0L%2FprTS3LmtzTcymTaN7wYsDxUtKGGDSS9%2FeOZXWnVpZltKSfMiEdN2krV%2BN1QMTG80X4EjXBc3aOncPHn5UNi33Fb7bfnIJPI9kD3Dqv2%2FEQ7R74l6M83mnoEOiDdCiiQWDCb2GiihsngK1cLmkJgimdgHxkBLG0wTtGz%2BbbbYkbkzknG%2BIYzWMfpIVTMr6VaZUikEx6fqVFJz9AWhltauwAAAA",
     },
   ],
   maxSidebarCategoryChip: 6, // It is recommended to set it to a common multiple of 2 and 3
