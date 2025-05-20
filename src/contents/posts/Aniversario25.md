@@ -75,7 +75,7 @@ Te compartimos la ubicación para facilitar tu llegada:
 🔼 Elevación mínima: 2054 m  
 🔽 Elevación máxima: 2513 m  
 ⏱️ Tiempo aproximado: 4 hrs  
-🍉 Abastecimiento 1: km 9 
+🍉 Abastecimiento 1: km 9  
 🍌 Abastecimiento 2: km 17
 
 
@@ -136,9 +136,13 @@ Te compartimos la ubicación para facilitar tu llegada:
 ## Entraga de Kits
 
 * Fecha: Sabado 24 Mayo
-* Lugar: Por confirmar 
-* Hora: Por confirmar
-* Requisitos: Por confirmar
+* Lugar: [*Bicisport Morelia, Blvd. García de León 588, Nueva Chapultepec, 58280 Morelia, Mich.*](https://maps.app.goo.gl/NMaoaPKK2WATgc1m7)
+* Hora: De 4:00 P.M. a 7:00 P.M. 
+* Requisitos: Nombre completo y equipo en los casos que aplique. 
+
+<p align="center">
+  <img src="/BCS.png" alt="Bicisport" width="35%"/>
+</p>
 
 ---
 
@@ -320,7 +324,7 @@ Te compartimos la ubicación para facilitar tu llegada:
 <div class="carousel-container-1">
   <div class="carousel-slides-1">
     <div class="carousel-slide-1">
-      <a href="https://example.com/uno" target="_blank">
+      <a href="https://www.instagram.com/dogkeepers/" target="_blank">
         <img src="/Z1.jpg" alt="DKP">
       </a>
     </div>
