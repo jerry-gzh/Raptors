@@ -18,6 +18,14 @@ La rodada de aniversario será el domingo 25 de mayo, y arrancamos a las 7:30 a.
 
 <div style="left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto"><iframe src="https://www.tickcounter.com/widget/countdown/7203031" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden" title="2° Aniversario"></iframe></div>
 
+## Álbum 
+
+Encuentra tu foto!
+
+Gracias a nuestro equipo de fotografos [Yad](https://www.instagram.com/yadgaba?igsh=djg3bnZvaTU0ZnVo) [Sosa](https://www.instagram.com/daniellsosar?igsh=MW84amZob3hsbTd6aA==) y [Jerry](https://www.instagram.com/jerry_gzh/profilecard/?igsh=MXN5bnkwaW4xNHZrMQ==), les compartimos todas las fotos del evento. 
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/193737956@N08/albums/72177720326427278" title="2do Aniversario"><img src="https://live.staticflickr.com/65535/54548021316_7b09fc5beb_c.jpg" width="800" height="600" alt="2do Aniversario"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
 ## Mapa general
 
 En esta edición ofrecemos dos rutas para distintos niveles. Te compartimos todos los detalles de ambas para que elijas la que más te convenga. En cualquiera de las dos, la diversión está garantizada.
