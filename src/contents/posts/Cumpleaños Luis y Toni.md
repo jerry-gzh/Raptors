@@ -22,4 +22,4 @@ Ya con hambre y sed nos dispusimos a preparar la carne asada; salsas, giacamole,
 
 Así fue como rodamos, comimos y convivimos a lo grande y finalmente caía la tarde, momento de acomodar las bicicletas en el remolque y camionetas para emprender el regreso a Morelia. Una aventura que disfrutamos mucho como pocas y que nos deja muy contentos y con un gran sabor de boca a todos.  ¡Nos vemos en la próxima raptoaventura!
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/193737956@N08/albums/72177720327537122" title="Cumpleaños Luis y Toni"><img src="https://live.staticflickr.com/65535/54654880913_a181c663c1_c.jpg" width="800" height="600" alt="Cumpleaños Luis y Toni"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/193737956@N08/albums/72177720327537122" title="Cumpleaños Luis y Toni"><img src="https://live.staticflickr.com/65535/54654651191_4c8f190e7b_c.jpg" width="800" height="600" alt="Cumpleaños Luis y Toni"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
