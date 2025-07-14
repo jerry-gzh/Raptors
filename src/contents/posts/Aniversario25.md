@@ -22,11 +22,26 @@ La rodada de aniversario será el domingo 25 de mayo, y arrancamos a las 7:30 a.
 
 Encuentra tu foto!
 
-Gracias a nuestro equipo de fotografos [Yad](https://www.instagram.com/yadgaba?igsh=djg3bnZvaTU0ZnVo) [Sosa](https://www.instagram.com/daniellsosar?igsh=MW84amZob3hsbTd6aA==) y [Jerry](https://www.instagram.com/jerry_gzh/profilecard/?igsh=MXN5bnkwaW4xNHZrMQ==), les compartimos todas las fotos del evento. 
+Gracias a nuestro equipo de fotografos [Yad](https://www.instagram.com/yadgaba?igsh=djg3bnZvaTU0ZnVo) [Sosa](https://www.instagram.com/daniellsosar?igsh=MW84amZob3hsbTd6aA==) y [Jerry](https://www.instagram.com/jerry_gzh/profilecard/?igsh=MXN5bnkwaW4xNHZrMQ==), les compartimos todas las fotos del evento.  
+Desliza a lod lados para ver todo el contenido.
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/202920564@N06/albums/72177720326458230" title="Aniversario Raptors"><img src="https://live.staticflickr.com/65535/54551933437_4c82edc09c_c.jpg" width="800" height="600" alt="Aniversario Raptors"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+#### Álbum 1
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/193737956@N08/albums/72177720326427278" title="2do Aniversario"><img src="https://live.staticflickr.com/65535/54548021316_7b09fc5beb_c.jpg" width="800" height="600" alt="2do Aniversario"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<div style="text-align: center;">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/202920564@N06/albums/72177720326458230" title="Aniversario Raptors">
+    <img src="https://live.staticflickr.com/65535/54551933437_4c82edc09c_c.jpg" width="800" height="600" alt="Aniversario Raptors"/>
+  </a>
+  <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
+
+#### Álbum 2
+
+<div style="text-align: center; margin-top: 20px;">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/193737956@N08/albums/72177720326427278" title="2do Aniversario">
+    <img src="https://live.staticflickr.com/65535/54548021316_7b09fc5beb_c.jpg" width="800" height="600" alt="2do Aniversario"/>
+  </a>
+  <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
 
 ## Mapa general
 
