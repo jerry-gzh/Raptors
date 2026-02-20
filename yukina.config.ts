@@ -6,7 +6,7 @@ const YukinaConfig: Configuration = {
   subTitle: "Segundo aniversario 25 Mayo",
   brandTitle: "Raptors",
 
-  description: "Rueda con nosotros en nuestro 2° Aniversario",
+  description: "Rueda con nosotros en nuestro 3° Aniversario",
 
   site: "https://raptorsmorelia.com/",
 
