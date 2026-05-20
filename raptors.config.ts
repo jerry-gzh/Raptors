@@ -1,7 +1,7 @@
 import I18nKeys from "./src/locales/keys";
 import type { Configuration } from "./src/types/config";
 
-const YukinaConfig: Configuration = {
+const RaptorsConfig: Configuration = {
   title: "Raptors",
   subTitle: "Segundo aniversario 25 Mayo",
   brandTitle: "Raptors",
@@ -78,4 +78,4 @@ const YukinaConfig: Configuration = {
   bannerStyle: "LOOP", // 'loop' | 'static' | 'hidden'
 };
 
-export default YukinaConfig;
+export default RaptorsConfig;

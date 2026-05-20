@@ -1,5 +1,5 @@
 ---
-import YukinaConfig from "../../yukina.config";
+import RaptorsConfig from "../../raptors.config";
 import GlobalStyles from "./GlobalStyles.astro";
 import ScriptSetup from "./ScriptSetup.astro";
 
@@ -14,22 +14,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta name="generator" content={Astro.generator} />
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z45LGJXLLR"></script>
+<script
+  is:inline
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-Z45LGJXLLR"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z45LGJXLLR');
+  const analyticsWindow = window as Window & { dataLayer?: unknown[] };
+  const dataLayer = (analyticsWindow.dataLayer = analyticsWindow.dataLayer || []);
+  const gtag = (...args: unknown[]) => dataLayer.push(args);
+  gtag("js", new Date());
+  gtag("config", "G-Z45LGJXLLR");
 </script>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{YukinaConfig.title}</title>
-<meta name="title" content={YukinaConfig.title} />
-<meta name="description" content={YukinaConfig.description} />
+<title>{RaptorsConfig.title}</title>
+<meta name="title" content={RaptorsConfig.title} />
+<meta name="description" content={RaptorsConfig.description} />
 
 <!-- Iconos -->
 <link rel="icon" type="image/png" sizes="192x192" href="/logo192.png" />
@@ -39,22 +42,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={YukinaConfig.title} />
-<meta property="og:description" content={YukinaConfig.description} />
+<meta property="og:title" content={RaptorsConfig.title} />
+<meta property="og:description" content={RaptorsConfig.description} />
 <!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={YukinaConfig.title} />
-<meta property="twitter:description" content={YukinaConfig.description} />
+<meta property="twitter:title" content={RaptorsConfig.title} />
+<meta property="twitter:description" content={RaptorsConfig.description} />
 <!-- <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
 
 <!-- RSS AutoDiscovery -->
 <link
   rel="alternate"
   type="application/rss+xml"
-  title={YukinaConfig.title}
+  title={RaptorsConfig.title}
   href={new URL("rss.xml", Astro.site)}
 />
 

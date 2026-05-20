@@ -1,10 +1,11 @@
 {
-  "name": "yukina",
+  "name": "raptors-portal",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "check": "astro check",
     "preview": "astro preview",
     "astro": "astro"
   },

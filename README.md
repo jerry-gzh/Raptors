@@ -1,94 +1,115 @@
-# Yukina
+# Raptors Morelia
 
-Simple and Elegant Astro Blog Template
+Portal web de Raptors Morelia construido con Astro, Tailwind, Svelte y contenido en Markdown.
 
-![Preview](https://s2.loli.net/2025/01/26/S4URrsj9TFgOKAp.webp)
+## Stack
 
-[中文](https://github.com/WhitePaper233/yukina/blob/main/README_zh.md)
+- `Astro 5`
+- `Tailwind CSS`
+- `Svelte`
+- `astro-pagefind` para búsqueda
+- `@swup/astro` para transiciones
 
-## Demo Preview Links
+## Requisitos
 
-[🖥️ Live Demo (Vercel)](https://yukina-blog.vercel.app) |
-[🖥️ WhitePaper233's Blog (possibly not the latest version)](https://whitepaper233.top/)
+- `Node.js 22+`
+- `pnpm 9+`
 
-## 🛠️ Build Guide
-
-### 1. Install Node.js version 22 or above
-
-Go to the [Node.js official website](https://nodejs.org/) to download and install the latest version of Node.js.
-
-### 2. Enable Corepack
-
-```bash
-corepack enable
-```
-
-### 3. Install pnpm
-
-```bash
-corepack enable pnpm
-```
-
-### 4. Install Dependencies
+## Comandos clave
 
 ```bash
 pnpm install
-```
-
-### 5. Build Search Index
-
-```bash
-pnpm build
-```
-
-### 6. Start Development Server
-
-```bash
 pnpm dev
-```
-
-### 7. Build Project
-
-```bash
 pnpm build
+pnpm preview
+pnpm check
 ```
 
-### 8. Preview Project
+Qué hace cada uno:
+
+- `pnpm dev`: levanta el entorno local.
+- `pnpm build`: genera el sitio estático en `dist/` y reconstruye el índice de búsqueda.
+- `pnpm preview`: sirve localmente la versión compilada.
+- `pnpm check`: valida tipos e integración Astro.
+
+## Flujo normal de trabajo
+
+1. Editar contenido, configuración o estilos.
+2. Ejecutar `pnpm dev`.
+3. Validar con `pnpm build`.
+4. Subir cambios al repositorio.
+
+## Despliegue en Vercel
+
+Flujo recomendado si el repositorio ya está conectado a Vercel:
 
 ```bash
-pnpm preview
+git add .
+git commit -m "Actualiza portal"
+git push origin main
 ```
 
-## 🗺️ Roadmap
+Con ese `push`, Vercel normalmente genera el deploy automático a producción o al branch configurado.
 
-### Recent
+Flujo manual con CLI, solo si ya tienes Vercel instalado y el proyecto enlazado:
 
-✅ - Completed | 🧪 - In Testing | 🚧 - In Progress | ⏳ - Planned
+```bash
+vercel
+vercel --prod
+```
 
-| Status | Project                                             |
-| ------ | --------------------------------------------------- |
-| 🧪     | Basic feature implementation                        |
-| 🧪     | Refactoring some code, optimizing overall structure |
-| 🧪     | Optimizing animation effects                        |
-| 🧪     | Mobile adaptation                                   |
-| 🚧     | Optimizing website performance                      |
-| 🧪     | Adjustable colors                                   |
-| 🧪     | Adding RSS, SiteMap, and other features             |
-| 🧪     | More build options (e.g., SLUG generation methods)  |
-| ⏳     | Adding Live2D character                             |
-| 🧪     | Search functionality                                |
-| 🧪     | i18n                                                |
+Comandos útiles de primera configuración si alguna vez hace falta relinkear:
 
-### Long-term
+```bash
+vercel login
+vercel link
+```
 
-| Status | Project                                        |
-| ------ | ---------------------------------------------- |
-| ⏳     | Developing an easy-to-manage CLI and small CMS |
-| ⏳     | Slidev components                              |
-| ⏳     | More Markdown components                       |
+## Dónde se edita cada cosa
 
-## 🙏 Special Thanks
+- Contenido de publicaciones: `src/contents/posts/`
+- Texto de la página “About”: `src/contents/specs/about.md`
+- Configuración general del portal: `raptors.config.ts`
+- Metadatos, fuentes y favicon: `src/components/BaseHead.astro`
+- Estilo global y tokens de color: `src/components/GlobalStyles.astro`
+- Hero y carrusel principal: `src/components/Banner.astro`
+- Navegación: `src/components/NavBar.astro`
+- Tarjetas de portada: `src/components/PostCard.astro`
+- Archivos públicos directos: `public/`
 
-- [Hexo Shoka Theme](https://github.com/amehime/hexo-theme-shoka) for providing design ideas
+## Estructura rápida
 
-- [Astro Fuwari Template](https://github.com/saicaca/fuwari) for providing the main design ideas and some code implementations
+```text
+.
+├── public/                  # archivos estáticos, imágenes, GPX, HTML auxiliares
+├── src/
+│   ├── components/          # navbar, banner, footer, tarjetas, búsqueda
+│   ├── contents/
+│   │   ├── posts/           # publicaciones del sitio
+│   │   └── specs/           # contenido fijo, por ejemplo about
+│   ├── layouts/             # layouts base y de posts
+│   ├── locales/             # textos i18n
+│   ├── pages/               # rutas Astro
+│   ├── plugins/             # plugins markdown
+│   ├── styles/              # estilos globales
+│   ├── types/               # tipos del proyecto
+│   └── utils/               # helpers de contenido, fechas, hash, cover
+├── astro.config.mjs
+├── package.json
+└── raptors.config.ts
+```
+
+## Notas operativas
+
+- El sitio usa `src/contents/posts/` como fuente principal de publicaciones.
+- `pnpm build` también actualiza la búsqueda, así que conviene correrlo antes de publicar.
+- Los archivos en `public/` se sirven tal cual, sin pasar por el pipeline de Astro.
+- Si cambias branding, colores o tipografías, empieza por `raptors.config.ts` y `src/components/GlobalStyles.astro`.
+
+## Limpieza aplicada
+
+Se retiró la documentación genérica de plantilla y contenido tutorial sin uso.
+
+## Licencia
+
+Se conserva el archivo `LICENSE` existente como rastro de atribución del código base original sobre el que se hicieron modificaciones.
