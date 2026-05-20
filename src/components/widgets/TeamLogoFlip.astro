@@ -1,0 +1,93 @@
+---
+interface Props {
+  primarySrc: string;
+  secondarySrc: string;
+  alt: string;
+  className?: string;
+  imageClass?: string;
+}
+
+const {
+  primarySrc,
+  secondarySrc,
+  alt,
+  className = "",
+  imageClass = "",
+} = Astro.props;
+---
+
+<div class:list={["logo-flip-scene", className]} role="img" aria-label={alt}>
+  <div class="logo-flip-cube">
+    <img
+      src={primarySrc}
+      alt=""
+      aria-hidden="true"
+      class:list={["logo-face logo-face-front", imageClass]}
+    />
+    <img
+      src={secondarySrc}
+      alt=""
+      aria-hidden="true"
+      class:list={["logo-face logo-face-back", imageClass]}
+    />
+  </div>
+</div>
+
+<style>
+  .logo-flip-scene {
+    --logo-depth: 14px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    perspective: 1200px;
+  }
+
+  .logo-flip-cube {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    animation: logo-cube-swap 8s linear infinite;
+    will-change: transform;
+  }
+
+  .logo-face {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    object-fit: cover;
+  }
+
+  .logo-face-front {
+    transform: rotateY(0deg) translateZ(var(--logo-depth));
+  }
+
+  .logo-face-back {
+    transform: rotateY(180deg) translateZ(var(--logo-depth));
+  }
+
+  @keyframes logo-cube-swap {
+    0%,
+    62.5% {
+      transform: rotateY(0deg);
+    }
+
+    68.75%,
+    93.75% {
+      transform: rotateY(-180deg);
+    }
+
+    100% {
+      transform: rotateY(-360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo-flip-cube {
+      animation: none;
+    }
+  }
+</style>

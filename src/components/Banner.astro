@@ -1,7 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import RaptorsConfig from "../../raptors.config";
 import { GetCarouselImages } from "../utils/assets";
 import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
+import { IdToSlug } from "../utils/hash";
 
 export interface Props {
   title?: string;
@@ -13,7 +15,16 @@ const { title, subTitle, bannerImage, slug } = Astro.props;
 
 const hasTitle = title !== undefined || subTitle !== undefined;
 const hasHeaderImg = bannerImage !== undefined || slug !== undefined;
-const heroBadges = RaptorsConfig.heroBadges ?? [];
+const anniversaryEntry = (await getCollection("posts")).find(
+  (entry) => entry.data.title === "3° Aniversario Raptors",
+);
+const anniversaryPath = anniversaryEntry
+  ? `/posts/${IdToSlug(anniversaryEntry.id.toLowerCase())}`
+  : "/";
+const heroBadges = (RaptorsConfig.heroBadges ?? []).filter((badge) => {
+  if (hasTitle) return true;
+  return badge !== "3er Aniversario" && badge !== "Domingo 31 de mayo de 2026";
+});
 
 let carouselImgsList = GetCarouselImages();
 const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
@@ -49,31 +60,61 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
     }
     <div class="relative h-[95%] w-full">
       <div
-        class="absolute left-1/2 top-1/2 w-[88%] -translate-x-1/2 -translate-y-1/2 lg:w-3/4"
+        class="absolute left-1/2 top-[58%] w-[92%] -translate-x-1/2 -translate-y-1/2 sm:top-[55%] sm:w-[88%] lg:top-1/2 lg:w-3/4"
       >
-        <div class="hero-copy soft-float flex flex-col">
-          <div class="hero-kicker-wrap">
-            <span class="hero-kicker">
-              {RaptorsConfig.heroLabel ?? "Raptors Morelia"}
-            </span>
-          </div>
-          <h1
-            class:list={[hasTitle ? "title-normal" : "title-index"]}
-            class="title"
-          >
-            {title ?? RaptorsConfig.title}
-          </h1>
-          <h2 class="subtitle">{subTitle ?? RaptorsConfig.subTitle}</h2>
-          {
-            heroBadges.length > 0 && (
-              <div class="hero-badges">
-                {heroBadges.map((badge) => (
-                  <span class="hero-badge">{badge}</span>
-                ))}
+        {
+          !hasHeaderImg ? (
+            <a href={anniversaryPath} class="hero-link">
+              <div class="hero-copy soft-float flex flex-col">
+                <div class="hero-kicker-wrap">
+                  <span class="hero-kicker">
+                    {RaptorsConfig.heroLabel ?? "Raptors Morelia"}
+                  </span>
+                </div>
+                <h1
+                  class:list={[hasTitle ? "title-normal" : "title-index"]}
+                  class="title"
+                >
+                  {title ?? RaptorsConfig.title}
+                </h1>
+                <h2 class="subtitle">{subTitle ?? RaptorsConfig.subTitle}</h2>
+                {
+                  heroBadges.length > 0 && (
+                    <div class="hero-badges">
+                      {heroBadges.map((badge) => (
+                        <span class="hero-badge">{badge}</span>
+                      ))}
+                    </div>
+                  )
+                }
               </div>
-            )
-          }
-        </div>
+            </a>
+          ) : (
+            <div class="hero-copy soft-float flex flex-col">
+              <div class="hero-kicker-wrap">
+                <span class="hero-kicker">
+                  {RaptorsConfig.heroLabel ?? "Raptors Morelia"}
+                </span>
+              </div>
+              <h1
+                class:list={[hasTitle ? "title-normal" : "title-index"]}
+                class="title"
+              >
+                {title ?? RaptorsConfig.title}
+              </h1>
+              <h2 class="subtitle">{subTitle ?? RaptorsConfig.subTitle}</h2>
+              {
+                heroBadges.length > 0 && (
+                  <div class="hero-badges">
+                    {heroBadges.map((badge) => (
+                      <span class="hero-badge">{badge}</span>
+                    ))}
+                  </div>
+                )
+              }
+            </div>
+          )
+        }
       </div>
     </div>
   </div>
@@ -161,11 +202,13 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
 
 <style define:vars={{ carouselAnimationTime }}>
   .banner {
-    @apply relative h-[calc(var(--banner-height)*3/4)] opacity-100 lg:h-[var(--banner-height)];
+    @apply relative opacity-100 lg:h-[var(--banner-height)];
+    height: clamp(31rem, 74vh, 38rem);
   }
 
   .carousel {
-    @apply absolute left-0 top-0 -z-10 block h-[calc(var(--banner-height)*3/4)] w-full overflow-hidden bg-black lg:h-[var(--banner-height)];
+    @apply absolute left-0 top-0 -z-10 block w-full overflow-hidden bg-black lg:h-[var(--banner-height)];
+    height: clamp(31rem, 74vh, 38rem);
     animation-fill-mode: forwards;
   }
 
@@ -187,7 +230,8 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
   }
 
   .cover {
-    @apply absolute left-0 top-0 z-0 block h-[var(--banner-height)] w-full overflow-hidden bg-black;
+    @apply absolute left-0 top-0 z-0 block w-full overflow-hidden bg-black lg:h-[var(--banner-height)];
+    height: clamp(31rem, 74vh, 38rem);
   }
 
   .cover::before {
@@ -203,13 +247,24 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
   }
 
   .hero-copy {
-    @apply mx-auto max-w-4xl rounded-[2.25rem] border border-white/15 px-6 py-8 backdrop-blur-md lg:px-10 lg:py-10;
+    @apply mx-auto max-w-4xl rounded-[1.75rem] border border-white/15 px-5 py-6 backdrop-blur-md sm:px-6 sm:py-8 lg:rounded-[2.25rem] lg:px-10 lg:py-10;
     background:
       linear-gradient(145deg, rgba(15, 15, 15, 0.76), rgba(15, 15, 15, 0.38)),
       radial-gradient(circle at top left, rgba(255, 133, 24, 0.24), transparent 38%);
     box-shadow: 0 30px 80px -44px rgba(0, 0, 0, 0.85);
     position: relative;
     overflow: hidden;
+  }
+
+  .hero-link {
+    @apply block rounded-[1.75rem] no-underline outline-none lg:rounded-[2.25rem];
+  }
+
+  .hero-link:hover .hero-copy,
+  .hero-link:focus-visible .hero-copy {
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 36px 88px -42px rgba(0, 0, 0, 0.9);
+    transform: translateY(-2px);
   }
 
   .hero-copy::after {
@@ -223,7 +278,7 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
   }
 
   .hero-kicker {
-    @apply inline-flex items-center rounded-full border border-white/15 px-4 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/70;
+    @apply inline-flex items-center rounded-full border border-white/15 px-3 py-1.5 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-white/70 sm:px-4 sm:text-[0.68rem] sm:tracking-[0.22em];
     background: rgba(255, 255, 255, 0.06);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
   }
@@ -235,24 +290,24 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
   }
 
   .title-index {
-    @apply mb-0 text-6xl leading-[5rem] lg:mb-1 lg:text-8xl;
+    @apply mb-0 text-[2.65rem] leading-[0.95] sm:text-6xl sm:leading-[5rem] lg:mb-1 lg:text-8xl;
   }
 
   .title-normal {
-    @apply mb-1 text-3xl lg:text-5xl;
+    @apply mb-1 text-2xl sm:text-3xl lg:text-5xl;
   }
 
   .subtitle {
-    @apply mt-4 text-center text-lg text-[var(--subtitle-color)] drop-shadow-md lg:text-3xl;
+    @apply mt-3 text-center text-[0.98rem] leading-snug text-[var(--subtitle-color)] drop-shadow-md sm:mt-4 sm:text-lg lg:text-3xl;
     font-family: var(--subtitle-font);
   }
 
   .hero-badges {
-    @apply mt-6 flex flex-wrap justify-center gap-3;
+    @apply mt-5 flex flex-wrap justify-center gap-2 sm:mt-6 sm:gap-3;
   }
 
   .hero-badge {
-    @apply inline-flex items-center rounded-full border border-white/10 px-3.5 py-2 text-sm font-medium text-white/80;
+    @apply inline-flex items-center rounded-full border border-white/10 px-3 py-1.5 text-[0.72rem] font-medium leading-tight text-white/80 sm:px-3.5 sm:py-2 sm:text-sm;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 133, 24, 0.12));
     box-shadow: 0 14px 28px -20px rgba(0, 0, 0, 0.75);
   }

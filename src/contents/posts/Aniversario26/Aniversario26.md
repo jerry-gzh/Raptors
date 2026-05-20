@@ -1,7 +1,7 @@
 ---
 title: 3° Aniversario Raptors
 published: 2026-02-19
-description: Domingo 31 de mayo de 2026
+description: Toda la información clave para vivir la rodada del 3er aniversario Raptors
 licenseName: "RaptorsMLM"
 author: Jerry
 #sourceLink: "https://github.com/emn178/markdown"

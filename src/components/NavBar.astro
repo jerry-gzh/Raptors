@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar.svelte";
 import MobileSearchBar from "./MobileSearchBar.svelte";
 import "astro-pagefind";
 
-const navCount = RaptorsConfig.navigators.length;
+const mobileNavigators = RaptorsConfig.navigators.filter((nav) => nav.href !== "/");
 const currentPath = Astro.url.pathname;
 ---
 
@@ -88,7 +88,7 @@ const currentPath = Astro.url.pathname;
       class="mobile-menu-nav mobile-menu-nav-closed flex flex-col space-y-6 overflow-hidden text-xl font-medium text-[var(--text-color)] transition-all duration-300"
     >
       {
-        RaptorsConfig.navigators.map((nav) => (
+        mobileNavigators.map((nav) => (
           <li class="mt-1">
             <a
               href={nav.href}
@@ -113,7 +113,7 @@ const currentPath = Astro.url.pathname;
   </div>
 </nav>
 
-<style define:vars={{ navCount }}>
+<style>
   .nav {
     @apply fixed left-1/2 z-10 flex w-full select-none flex-col justify-end rounded-b-2xl border border-t-0 border-[var(--border-color)] bg-[var(--card-color-transparent)] px-2.5 opacity-0 backdrop-blur-xl transition-all;
     @apply lg:w-[var(--page-width-lg)] lg:rounded-b-2xl;
@@ -210,12 +210,12 @@ const currentPath = Astro.url.pathname;
   }
 
   .mobile-menu-nav-closed {
-    @apply h-0 opacity-0;
+    @apply max-h-0 opacity-0;
   }
 
   .mobile-menu-nav-opened {
     @apply mt-2 border-t border-[var(--border-color)] pt-5 opacity-100;
-    height: calc(var(--navCount) * 52px);
+    max-height: 14rem;
   }
 
   .mobile-menu-nav li a {

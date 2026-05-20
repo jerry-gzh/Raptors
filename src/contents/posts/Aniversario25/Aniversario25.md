@@ -1,7 +1,7 @@
 ---
 title: 2° Aniversario Raptors
 published: 2025-05-25
-description: Domingo 25 de Mayo 
+description: Una jornada de aniversario pensada para rodar, convivir y celebrar juntos
 licenseName: "RaptorsMLM"
 author: Jerry
 #sourceLink: "https://github.com/emn178/markdown"

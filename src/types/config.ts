@@ -19,6 +19,7 @@ interface Configuration {
   username: string;
   sign: string;
   avatarUrl: string;
+  alternateAvatarUrl?: string;
 
   socialLinks: { icon: string; link: string }[];
 

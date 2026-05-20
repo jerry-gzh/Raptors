@@ -1,7 +1,7 @@
 ---
 title: Cumpleaños Luis y Toni
 published: 2025-07-13
-description: Un excelente motivo para rodar
+description: Una raptorrodada festiva con subida dura, lluvia y convivencia en grande
 licenseName: "RaptorsMLM"
 author: Cesar R. 
 #sourceLink: "https://github.com/emn178/markdown"

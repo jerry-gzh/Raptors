@@ -1,6 +1,7 @@
 ---
 import RaptorsConfig from "../../raptors.config";
 import SocialIcon from "./widgets/SocialIcon.astro";
+import TeamLogoFlip from "./widgets/TeamLogoFlip.astro";
 ---
 
 <div class="flex w-full flex-row justify-center">
@@ -10,10 +11,12 @@ import SocialIcon from "./widgets/SocialIcon.astro";
       style=`animation-delay: var(--onload-animation-delay); box-shadow: 0 22px 48px -34px var(--shadow-color);`
     >
       <a href="/about" class="avatar-wrapper">
-        <img
-          src={RaptorsConfig.avatarUrl}
-          alt="avatar"
-          class="avatar lozad select-none"
+        <TeamLogoFlip
+          primarySrc={RaptorsConfig.avatarUrl}
+          secondarySrc={RaptorsConfig.alternateAvatarUrl ?? RaptorsConfig.avatarUrl}
+          alt={`Logotipo de ${RaptorsConfig.username}`}
+          className="block h-56 w-56 select-none rounded-2xl"
+          imageClass="rounded-2xl border border-[var(--border-color)]"
         />
       </a>
       <div class="username mt-4">
@@ -140,10 +143,6 @@ import SocialIcon from "./widgets/SocialIcon.astro";
 
   .avatar-wrapper::after:hover {
     background: linear-gradient(180deg, transparent, rgba(255, 133, 24, 0.24));
-  }
-
-  .avatar {
-    @apply h-56 w-56 rounded-2xl border border-[var(--border-color)] transition-all hover:cursor-pointer;
   }
 
   .ride-strip {

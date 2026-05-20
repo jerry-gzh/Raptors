@@ -121,6 +121,31 @@ vercel link
 
 Se retiró la documentación genérica de plantilla y contenido tutorial sin uso.
 
+## Siguientes fases
+
+Mejoras sugeridas para las próximas iteraciones del proyecto:
+
+- Definir una guía editorial corta para posts:
+  usar una misma estructura de `title`, `description`, fecha, portada y tono de redacción para que archivo y home se sientan consistentes.
+- Formalizar una convención de nombres para assets:
+  especialmente en `src/assets/home-carousel/`, `public/posts/` y `public/site/` para evitar mezclas entre branding, eventos y contenido temporal.
+- Afinar la experiencia móvil completa:
+  revisar spacing, alturas, overlays y navegación en pantallas pequeñas después de cada cambio visual fuerte.
+- Revisar accesibilidad visual:
+  contraste de textos, foco visible en enlaces y botones, estados hover/focus, y lectura real en modo claro y oscuro.
+- Unificar la identidad del aniversario:
+  decidir qué elementos son permanentes del sitio y cuáles son solo de campaña para poder activarlos o retirarlos sin tocar muchos componentes.
+- Optimizar imágenes:
+  normalizar pesos, dimensiones y formatos de portadas y carrusel para mejorar carga en móvil.
+- Mejorar SEO básico del contenido:
+  revisar títulos, descripciones, `og:` metadata e imagen social compartida por post.
+- Preparar una pauta de despliegue:
+  documentar un mini checklist antes de hacer `git push` a producción, por ejemplo `pnpm check`, `pnpm build`, revisión de links, revisión móvil y revisión de assets nuevos.
+- Revisar dependencias cada cierto tiempo:
+  especialmente `Browserslist`, Astro y plugins de búsqueda/transiciones para evitar deuda técnica silenciosa.
+- Considerar una fase de componentes reutilizables:
+  si el sitio sigue creciendo, conviene separar mejor patrones como cards, badges, bloques editoriales y hero campaigns para no repetir estilos.
+
 ## Licencia
 
 Se conserva el archivo `LICENSE` existente como rastro de atribución del código base original sobre el que se hicieron modificaciones.

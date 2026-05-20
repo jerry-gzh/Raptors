@@ -1,7 +1,7 @@
 ---
 title: 1° Aniversario Raptors
 published: 2024-09-02
-description: Un excelente motivo para rodar
+description: Una rodada especial para celebrar el primer gran año de la manada
 licenseName: "RaptorsMLM"
 author: Jerry
 #sourceLink: "https://github.com/emn178/markdown"

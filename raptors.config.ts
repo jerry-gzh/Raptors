@@ -36,6 +36,7 @@ const RaptorsConfig: Configuration = {
   username: "Raptors Morelia",
   sign: "Unete!",
   avatarUrl: "https://i.postimg.cc/YCVSV8Xq/Raptors-2510.png",
+  alternateAvatarUrl: "/site/icons/Logo2.jpeg",
   socialLinks: [
     {
       icon: "line-md:facebook",

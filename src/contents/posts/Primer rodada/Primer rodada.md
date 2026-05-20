@@ -1,7 +1,7 @@
 ---
 title: Primer Jueves
 published: 2023-08-32
-description: Así fue como empezamos
+description: La historia de la rodada con la que comenzó oficialmente Raptors Morelia
 licenseName: "RaptorsMLM"
 author: Jerry
 #sourceLink: "https://github.com/emn178/markdown"

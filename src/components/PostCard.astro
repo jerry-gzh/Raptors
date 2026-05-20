@@ -3,8 +3,6 @@ import { IdToSlug } from "../utils/hash";
 import { Icon } from "astro-icon/components";
 import PostCardInfoIcon from "./widgets/PostCardInfoIcon.astro";
 import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
-import { i18n } from "../locales/translation";
-import I18nKeys from "../locales/keys";
 import RaptorsConfig from "../../raptors.config";
 import { formatDate } from "../utils/date";
 
@@ -16,13 +14,12 @@ export interface Props {
   tags?: string[];
   description?: string;
   image?: string;
-  readingMetadata: { time: number; wordCount: number };
+  readingMetadata?: { time: number; wordCount: number };
 }
 
 const props = Astro.props;
 const entryID = IdToSlug(props.id);
 const contentUrl = `/posts/${entryID}`;
-const { time, wordCount } = props.readingMetadata;
 ---
 
 <div
@@ -71,7 +68,6 @@ const { time, wordCount } = props.readingMetadata;
         >
         </div>
         <a href={contentUrl} class="title">
-          <span class="title-index-badge">0{Math.min(wordCount, 99)}</span>
           <p class="truncate">{props.title}</p>
           <Icon
             name="cuida:caret-right-outline"
@@ -129,21 +125,6 @@ const { time, wordCount } = props.readingMetadata;
       <div class="lg:ml-2">
         <p class="desc">{props.description}</p>
       </div>
-      <div>
-        <div class="select-none lg:ml-2">
-          <div class="reading-time">
-            <span>
-              {wordCount}
-              {i18n(I18nKeys.post_card_words)}
-            </span>
-            <span>|</span>
-            <span>
-              {time}
-              {i18n(I18nKeys.post_card_minutes)}
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="cover-container">
       <a href={contentUrl} class="cover-wrapper">
@@ -183,11 +164,6 @@ const { time, wordCount } = props.readingMetadata;
     font-family: var(--primary-font);
   }
 
-  .title-index-badge {
-    @apply hidden rounded-full border border-[var(--border-color)] px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[var(--text-color-lighten)] lg:inline-flex;
-    background: color-mix(in oklab, var(--card-color) 86%, var(--primary-color) 14%);
-  }
-
   .data {
     font-family: var(--primary-font);
     @apply flex flex-row items-center;
@@ -200,11 +176,6 @@ const { time, wordCount } = props.readingMetadata;
 
   .desc {
     @apply line-clamp-2 max-w-[92%] text-[var(--text-color)];
-    font-family: var(--primary-font);
-  }
-
-  .reading-time {
-    @apply space-x-3 align-middle text-sm text-[var(--text-color-lighten)];
     font-family: var(--primary-font);
   }
 
