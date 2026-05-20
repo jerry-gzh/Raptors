@@ -8,6 +8,7 @@ import MobileSearchBar from "./MobileSearchBar.svelte";
 import "astro-pagefind";
 
 const navCount = RaptorsConfig.navigators.length;
+const currentPath = Astro.url.pathname;
 ---
 
 <nav class="nav" id="nav">
@@ -42,11 +43,15 @@ const navCount = RaptorsConfig.navigators.length;
         <Icon name="mingcute:bike-line" size={32} />
         <p>{RaptorsConfig.brandTitle}</p>
       </div>
+      <span class="brand-badge">Morelia</span>
     </a>
     <div class="menu">
       {
         RaptorsConfig.navigators.map((nav) => (
-          <a href={nav.href}>
+          <a
+            href={nav.href}
+            class:list={[currentPath === nav.href ? "nav-item-active" : ""]}
+          >
             <p>{i18n(nav.nameKey)}</p>
           </a>
         ))
@@ -85,7 +90,13 @@ const navCount = RaptorsConfig.navigators.length;
       {
         RaptorsConfig.navigators.map((nav) => (
           <li class="mt-1">
-            <a href={nav.href} class="mobile-nav-item">
+            <a
+              href={nav.href}
+              class:list={[
+                "mobile-nav-item",
+                currentPath === nav.href ? "mobile-nav-item-active" : "",
+              ]}
+            >
               <div class="flex flex-row items-center space-x-2">
                 <span class="text-[var(--primary-color)]">·</span>
                 <span>{i18n(nav.nameKey)}</span>
@@ -119,7 +130,7 @@ const navCount = RaptorsConfig.navigators.length;
   }
 
   .brand > .title {
-    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 truncate rounded-xl px-4 py-2 text-2xl font-semibold tracking-[0.12em] text-[var(--primary-color)] transition-all;
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 truncate rounded-xl px-4 py-2 text-2xl font-semibold tracking-[0.16em] text-[var(--primary-color)] transition-all;
     @apply hover:bg-[var(--primary-color-hover)];
     font-family: var(--brand-font);
   }
@@ -138,11 +149,17 @@ const navCount = RaptorsConfig.navigators.length;
     @apply lg:block;
     @apply hover:bg-[var(--primary-color-hover)];
     @apply active:scale-95;
+    position: relative;
   }
 
   .brand-lg > .title {
     @apply flex h-full flex-row content-center items-center text-2xl font-semibold tracking-[0.14em] text-[var(--primary-color)];
     font-family: var(--brand-font);
+  }
+
+  .brand-badge {
+    @apply absolute -bottom-2 left-5 rounded-full border border-[var(--border-color)] bg-[var(--background-color-elevated)] px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-[var(--text-color-lighten)];
+    box-shadow: 0 10px 20px -16px var(--shadow-color);
   }
 
   .brand-lg .icon {
@@ -155,9 +172,23 @@ const navCount = RaptorsConfig.navigators.length;
   }
 
   .menu a {
-    @apply flex h-[3.25rem] items-center rounded-xl px-6 transition-all;
+    @apply relative flex h-[3.25rem] items-center rounded-full px-6 transition-all;
     @apply hover:bg-[var(--primary-color-hover)] hover:text-[var(--primary-color)];
     @apply active:scale-95;
+  }
+
+  .menu a::after {
+    @apply absolute bottom-2 left-1/2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-[var(--primary-color)] transition-all content-[''];
+  }
+
+  .menu a:hover::after,
+  .menu .nav-item-active::after {
+    @apply w-8;
+  }
+
+  .menu .nav-item-active {
+    @apply bg-[var(--primary-color-hover)] text-[var(--primary-color)];
+    box-shadow: inset 0 0 0 1px var(--border-color);
   }
 
   .menu p {
@@ -188,8 +219,12 @@ const navCount = RaptorsConfig.navigators.length;
   }
 
   .mobile-menu-nav li a {
-    @apply flex flex-row items-center justify-between;
+    @apply flex flex-row items-center justify-between rounded-2xl px-3 py-2 transition-all;
     font-family: var(--primary-font);
+  }
+
+  .mobile-nav-item-active {
+    @apply bg-[var(--primary-color-hover)] text-[var(--primary-color)];
   }
 
   @keyframes nav-onload-animation {

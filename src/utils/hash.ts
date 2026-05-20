@@ -1,6 +1,21 @@
 import { createHash } from "node:crypto";
 import RaptorsConfig from "../../raptors.config";
 
+export function GetCanonicalSlugSource(value: string): string {
+  const segments = value.split("/").filter(Boolean);
+  if (segments.length === 0) return value;
+
+  const lastSegment = segments[segments.length - 1];
+  const parentSegment = segments.length > 1 ? segments[segments.length - 2] : "";
+
+  if (lastSegment.toLowerCase() === "index" && parentSegment) return parentSegment;
+  if (parentSegment && lastSegment.toLowerCase() === parentSegment.toLowerCase()) {
+    return lastSegment;
+  }
+
+  return lastSegment;
+}
+
 /**
  * Converts a given slug to a hashed slug or returns the raw slug based on the configuration.
  *
@@ -8,15 +23,19 @@ import RaptorsConfig from "../../raptors.config";
  * @returns The hashed slug if the configuration mode is "HASH", otherwise the raw slug.
  */
 export function IdToSlug(slug: string): string {
+  const canonicalSlug = GetCanonicalSlugSource(slug);
   switch (RaptorsConfig.slugMode) {
     case "HASH": {
-      const hasedSlug = createHash("sha256").update(slug).digest("hex").slice(0, 8);
+      const hasedSlug = createHash("sha256")
+        .update(canonicalSlug)
+        .digest("hex")
+        .slice(0, 8);
       return hasedSlug;
     }
     case "RAW":
-      return slug;
+      return canonicalSlug;
     default:
-      return slug;
+      return canonicalSlug;
   }
 }
 

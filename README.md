@@ -70,6 +70,10 @@ vercel link
 - Contenido de publicaciones: `src/contents/posts/`
 - Texto de la página “About”: `src/contents/specs/about.md`
 - Configuración general del portal: `raptors.config.ts`
+- Imágenes del carrusel del home: `src/assets/home-carousel/`
+- Cada post vive en su propia carpeta dentro de `src/contents/posts/`
+- Assets públicos por evento: `public/posts/`
+- Branding global del sitio: `public/site/`
 - Metadatos, fuentes y favicon: `src/components/BaseHead.astro`
 - Estilo global y tokens de color: `src/components/GlobalStyles.astro`
 - Hero y carrusel principal: `src/components/Banner.astro`
@@ -82,10 +86,14 @@ vercel link
 ```text
 .
 ├── public/                  # archivos estáticos, imágenes, GPX, HTML auxiliares
+│   ├── posts/               # archivos públicos agrupados por evento/post
+│   └── site/                # branding e iconos globales del sitio
 ├── src/
 │   ├── components/          # navbar, banner, footer, tarjetas, búsqueda
+│   ├── assets/
+│   │   ├── home-carousel/   # imágenes exclusivas del hero/carrusel del home
 │   ├── contents/
-│   │   ├── posts/           # publicaciones del sitio
+│   │   ├── posts/           # cada post en su carpeta con md + cover
 │   │   └── specs/           # contenido fijo, por ejemplo about
 │   ├── layouts/             # layouts base y de posts
 │   ├── locales/             # textos i18n
@@ -105,6 +113,9 @@ vercel link
 - `pnpm build` también actualiza la búsqueda, así que conviene correrlo antes de publicar.
 - Los archivos en `public/` se sirven tal cual, sin pasar por el pipeline de Astro.
 - Si cambias branding, colores o tipografías, empieza por `raptors.config.ts` y `src/components/GlobalStyles.astro`.
+- El carrusel del home carga automáticamente todas las imágenes dentro de `src/assets/home-carousel/`.
+- Para un post nuevo, crea una carpeta en `src/contents/posts/` con este patrón: `Nombre del post/Nombre del post.md` y coloca ahí mismo su `cover.jpg`, `cover.png`, `cover.webp` o `cover.avif`.
+- Si un post necesita descargas, HTML auxiliares o imágenes públicas adicionales, guárdalas en `public/posts/<slug-del-evento>/`.
 
 ## Limpieza aplicada
 

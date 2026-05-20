@@ -3,8 +3,14 @@ import type { Configuration } from "./src/types/config";
 
 const RaptorsConfig: Configuration = {
   title: "Raptors",
-  subTitle: "Segundo aniversario 25 Mayo",
+  subTitle: "3er Aniversario · Domingo 31 de mayo de 2026",
   brandTitle: "Raptors",
+  heroLabel: "Comunidad MTB Morelia",
+  heroBadges: [
+    "3er Aniversario",
+    "Domingo 31 de mayo de 2026",
+    "Hecho en Morelia",
+  ],
 
   description: "Rueda con nosotros en nuestro 3° Aniversario",
 
@@ -56,16 +62,6 @@ const RaptorsConfig: Configuration = {
   maxSidebarTagChip: 12,
   maxFooterCategoryChip: 6,
   maxFooterTagChip: 24,
-
-  banners: [
-    "https://i.postimg.cc/fTyJ16nb/Primera-en-la-rana.jpg",
-    "https://i.postimg.cc/wMYTBPhw/Grupal24.jpg",
-    "https://i.postimg.cc/mgJd0SCK/Cesar.jpg",
-    "https://i.postimg.cc/SKtjPNZV/Retocaja24.jpg",
-    "https://i.postimg.cc/pVJ6pzMn/Beto.jpg",
-    "https://i.postimg.cc/jSLgg1wz/Luis-Abraham.jpg",
-    //"https://i.postimg.cc/Qx6YqDt8/Hermanos.jpg",
-  ],
 
   slugMode: "HASH", // 'RAW' | 'HASH'
 

@@ -6,7 +6,7 @@ import SocialIcon from "./widgets/SocialIcon.astro";
 <div class="flex w-full flex-row justify-center">
   <div class="flex flex-col space-y-3">
     <div
-      class="onload-animation rounded-[2rem] border border-[var(--border-color)] bg-[var(--card-color)] p-4"
+      class="hover-lift onload-animation rounded-[2.1rem] border border-[var(--border-color)] bg-[var(--card-color)] p-4"
       style=`animation-delay: var(--onload-animation-delay); box-shadow: 0 22px 48px -34px var(--shadow-color);`
     >
       <a href="/about" class="avatar-wrapper">
@@ -22,9 +22,14 @@ import SocialIcon from "./widgets/SocialIcon.astro";
       <p class="slogan mt-2 text-center text-[var(--text-color-lighten)]">
         {RaptorsConfig.sign}
       </p>
+      <div class="ride-strip mt-4">
+        <span>Mar</span>
+        <span>Jue</span>
+        <span>Dom</span>
+      </div>
       {
         RaptorsConfig.socialLinks.length > 0 && (
-          <div class="mt-1 flex flex-row justify-center">
+          <div class="mt-3 flex flex-row justify-center">
             <div class="flex w-[184px] flex-wrap justify-center gap-2">
               {RaptorsConfig.socialLinks.map((item) => (
                 <SocialIcon name={item.icon} link={item.link} />
@@ -139,6 +144,15 @@ import SocialIcon from "./widgets/SocialIcon.astro";
 
   .avatar {
     @apply h-56 w-56 rounded-2xl border border-[var(--border-color)] transition-all hover:cursor-pointer;
+  }
+
+  .ride-strip {
+    @apply flex justify-center gap-2;
+  }
+
+  .ride-strip span {
+    @apply rounded-full border border-[var(--border-color)] px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--text-color-lighten)];
+    background: color-mix(in oklab, var(--card-color) 88%, var(--primary-color) 12%);
   }
 
   .username > p {

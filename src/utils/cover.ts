@@ -1,5 +1,5 @@
-import { GetIndexFromSlugID } from "./hash";
-import RaptorsConfig from "../../raptors.config";
+import { GetCanonicalSlugSource, GetIndexFromSlugID } from "./hash";
+import { GetCarouselImages, GetPostCoverURL } from "./assets";
 
 /**
  * Retrieves the cover URL for an unspecified entry based on the provided ID.
@@ -8,6 +8,12 @@ import RaptorsConfig from "../../raptors.config";
  * @returns The URL of the corresponding cover image.
  */
 export function GetCoverURLForUnspecifiedEntry(id: string): string {
-  const index = GetIndexFromSlugID(id, RaptorsConfig.banners.length);
-  return RaptorsConfig.banners[index];
+  const postCover = GetPostCoverURL(id);
+  if (postCover) return postCover;
+
+  const carouselImages = GetCarouselImages();
+  if (carouselImages.length === 0) return "";
+
+  const index = GetIndexFromSlugID(GetCanonicalSlugSource(id), carouselImages.length);
+  return carouselImages[index];
 }

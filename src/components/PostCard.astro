@@ -26,7 +26,7 @@ const { time, wordCount } = props.readingMetadata;
 ---
 
 <div
-  class="group/post mx-3 flex flex-col overflow-hidden rounded-[2rem] border border-[var(--border-color)] bg-[var(--card-color)] lg:mx-0 lg:h-[212px]"
+  class="group/post hover-lift mx-3 flex flex-col overflow-hidden rounded-[2.1rem] border border-[var(--border-color)] bg-[var(--card-color)] lg:mx-0 lg:h-[212px]"
   style="box-shadow: 0 24px 55px -34px var(--shadow-color);"
 >
   <a
@@ -63,7 +63,7 @@ const { time, wordCount } = props.readingMetadata;
   </a>
   <div class="flex h-[128px] flex-row lg:h-[212px]">
     <div
-      class="flex w-full flex-col justify-between bg-[linear-gradient(135deg,rgba(255,255,255,0.28),transparent_40%)] pb-5 pl-5 pr-6 pt-3 lg:w-[calc(var(--page-width-lg)-404px)] lg:py-7 lg:pr-0 xl:w-[calc(var(--page-width-xl)-676px)] dark:bg-[linear-gradient(135deg,rgba(255,140,32,0.08),transparent_40%)]"
+      class="post-copy flex w-full flex-col justify-between pb-5 pl-5 pr-6 pt-3 lg:w-[calc(var(--page-width-lg)-404px)] lg:py-7 lg:pr-0 xl:w-[calc(var(--page-width-xl)-676px)]"
     >
       <div class="flex w-full flex-row items-center">
         <div
@@ -71,6 +71,7 @@ const { time, wordCount } = props.readingMetadata;
         >
         </div>
         <a href={contentUrl} class="title">
+          <span class="title-index-badge">0{Math.min(wordCount, 99)}</span>
           <p class="truncate">{props.title}</p>
           <Icon
             name="cuida:caret-right-outline"
@@ -157,10 +158,34 @@ const { time, wordCount } = props.readingMetadata;
   </div>
 </div>
 <style>
+  .post-copy {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.36), transparent 36%),
+      linear-gradient(180deg, transparent, rgba(255, 133, 24, 0.05));
+    position: relative;
+  }
+
+  :root.dark .post-copy {
+    background:
+      linear-gradient(135deg, rgba(255, 140, 32, 0.11), transparent 34%),
+      linear-gradient(180deg, transparent, rgba(255, 133, 24, 0.04));
+  }
+
+  .post-copy::after {
+    @apply absolute right-5 top-5 h-16 w-16 rounded-full opacity-60 content-[''];
+    background: radial-gradient(circle, var(--glow-soft), transparent 70%);
+    filter: blur(5px);
+  }
+
   .title {
     @apply flex w-full flex-row items-center space-x-1 align-top text-xl font-semibold text-[var(--text-color)] lg:text-2xl;
     @apply transition-all hover:text-[var(--primary-color)];
     font-family: var(--primary-font);
+  }
+
+  .title-index-badge {
+    @apply hidden rounded-full border border-[var(--border-color)] px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[var(--text-color-lighten)] lg:inline-flex;
+    background: color-mix(in oklab, var(--card-color) 86%, var(--primary-color) 14%);
   }
 
   .data {
@@ -174,7 +199,7 @@ const { time, wordCount } = props.readingMetadata;
   }
 
   .desc {
-    @apply line-clamp-1 text-[var(--text-color)];
+    @apply line-clamp-2 max-w-[92%] text-[var(--text-color)];
     font-family: var(--primary-font);
   }
 
@@ -190,6 +215,14 @@ const { time, wordCount } = props.readingMetadata;
 
   .cover-wrapper {
     @apply h-full w-full select-none overflow-hidden rounded-r-3xl;
+  }
+
+  .cover-wrapper img {
+    transition: transform 320ms ease;
+  }
+
+  .group\/post:hover .cover-wrapper img {
+    transform: scale(1.04);
   }
 
   .cover-wrapper::before {

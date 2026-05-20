@@ -6,7 +6,7 @@ import RaptorsConfig from "../../raptors.config";
 <div class="mx-3 space-y-4">
   <!-- Owner info card -->
   <div
-    class="rounded-[2rem] border border-[var(--border-color)] bg-[var(--card-color)] transition-all lg:hidden"
+    class="hover-lift rounded-[2rem] border border-[var(--border-color)] bg-[var(--card-color)] transition-all lg:hidden"
     style="box-shadow: 0 22px 48px -34px var(--shadow-color);"
   >
     <div class="flex flex-row md:flex-col md:pt-4">
@@ -173,6 +173,7 @@ import RaptorsConfig from "../../raptors.config";
     <div
       class="flex w-full flex-col items-center text-sm text-[var(--text-color-lighten)]"
     >
+      <p class="footer-tagline">No es solo una rodada. Es la manada.</p>
       <p>
         © {new Date().getFullYear()}
         {RaptorsConfig.username} All Rights Reserved.
@@ -188,6 +189,11 @@ import RaptorsConfig from "../../raptors.config";
 </div>
 
 <style>
+  .footer-tagline {
+    @apply mb-2 rounded-full border border-[var(--border-color)] px-4 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--primary-color)];
+    background: color-mix(in oklab, var(--card-color) 86%, var(--primary-color) 14%);
+  }
+
   .link {
     @apply text-[var(--primary-color)] transition-all hover:brightness-110;
   }

@@ -1,5 +1,6 @@
 ---
 import RaptorsConfig from "../../raptors.config";
+import { GetCarouselImages } from "../utils/assets";
 import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
 
 export interface Props {
@@ -12,8 +13,9 @@ const { title, subTitle, bannerImage, slug } = Astro.props;
 
 const hasTitle = title !== undefined || subTitle !== undefined;
 const hasHeaderImg = bannerImage !== undefined || slug !== undefined;
+const heroBadges = RaptorsConfig.heroBadges ?? [];
 
-let carouselImgsList = RaptorsConfig.banners;
+let carouselImgsList = GetCarouselImages();
 const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
 ---
 
@@ -49,7 +51,12 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
       <div
         class="absolute left-1/2 top-1/2 w-[88%] -translate-x-1/2 -translate-y-1/2 lg:w-3/4"
       >
-        <div class="hero-copy flex flex-col">
+        <div class="hero-copy soft-float flex flex-col">
+          <div class="hero-kicker-wrap">
+            <span class="hero-kicker">
+              {RaptorsConfig.heroLabel ?? "Raptors Morelia"}
+            </span>
+          </div>
           <h1
             class:list={[hasTitle ? "title-normal" : "title-index"]}
             class="title"
@@ -57,6 +64,15 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
             {title ?? RaptorsConfig.title}
           </h1>
           <h2 class="subtitle">{subTitle ?? RaptorsConfig.subTitle}</h2>
+          {
+            heroBadges.length > 0 && (
+              <div class="hero-badges">
+                {heroBadges.map((badge) => (
+                  <span class="hero-badge">{badge}</span>
+                ))}
+              </div>
+            )
+          }
         </div>
       </div>
     </div>
@@ -187,11 +203,29 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
   }
 
   .hero-copy {
-    @apply mx-auto max-w-4xl rounded-[2rem] border border-white/15 px-6 py-8 backdrop-blur-md lg:px-10 lg:py-10;
+    @apply mx-auto max-w-4xl rounded-[2.25rem] border border-white/15 px-6 py-8 backdrop-blur-md lg:px-10 lg:py-10;
     background:
       linear-gradient(145deg, rgba(15, 15, 15, 0.76), rgba(15, 15, 15, 0.38)),
       radial-gradient(circle at top left, rgba(255, 133, 24, 0.24), transparent 38%);
     box-shadow: 0 30px 80px -44px rgba(0, 0, 0, 0.85);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-copy::after {
+    @apply absolute right-4 top-4 h-24 w-24 rounded-full content-[''];
+    background: radial-gradient(circle, rgba(255, 133, 24, 0.32), transparent 68%);
+    filter: blur(4px);
+  }
+
+  .hero-kicker-wrap {
+    @apply flex justify-center;
+  }
+
+  .hero-kicker {
+    @apply inline-flex items-center rounded-full border border-white/15 px-4 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/70;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
   }
 
   .title {
@@ -211,6 +245,16 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
   .subtitle {
     @apply mt-4 text-center text-lg text-[var(--subtitle-color)] drop-shadow-md lg:text-3xl;
     font-family: var(--subtitle-font);
+  }
+
+  .hero-badges {
+    @apply mt-6 flex flex-wrap justify-center gap-3;
+  }
+
+  .hero-badge {
+    @apply inline-flex items-center rounded-full border border-white/10 px-3.5 py-2 text-sm font-medium text-white/80;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 133, 24, 0.12));
+    box-shadow: 0 14px 28px -20px rgba(0, 0, 0, 0.75);
   }
 
   .waves {

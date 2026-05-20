@@ -4,6 +4,22 @@
   animation-fill-mode: forwards;
 }
 
+.hover-lift {
+  transition:
+    transform 260ms ease,
+    box-shadow 260ms ease,
+    border-color 260ms ease,
+    background-color 260ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.soft-float {
+  animation: soft-float 7s ease-in-out infinite;
+}
+
 @keyframes fade-in-up {
   0% {
     scale: 98%;
@@ -31,5 +47,16 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes soft-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
   }
 }

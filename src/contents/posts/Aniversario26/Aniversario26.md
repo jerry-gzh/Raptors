@@ -10,7 +10,7 @@ draft: false
 
 <p align="center">
   <img
-    src="/3RA.jpeg"
+    src="/posts/aniversario26/media/3ra.jpeg"
     alt="3° Aniversario Raptors"
     style="width: 100%; max-width: 960px; height: auto; border-radius: 10px;"
   />
@@ -18,7 +18,7 @@ draft: false
 
 <div style="width:100%; margin:0 auto;">
   <iframe
-    src="/countdown-aniv26.html"
+    src="/posts/aniversario26/tools/countdown.html"
     width="100%"
     height="140"
     title="Cuenta regresiva 3° Aniversario Raptors"
@@ -101,7 +101,7 @@ Exclusivamente para ciclistas de nivel avanzado.
 ></iframe>
 
 <div style="display: flex; justify-content: center; margin-top: 1rem;">
-  <a href="/RLarga3erAniv.gpx" download style="
+  <a href="/posts/aniversario26/downloads/ruta-larga-3er-aniversario.gpx" download style="
     background-color: #FC3941;
     color: white !important;
     padding: 0.5rem 15vw;
@@ -133,7 +133,7 @@ Admite ciclistas de nivel intermedio, intermedio a avanzado y avanzado.
 ></iframe>
 
 <div style="display: flex; justify-content: center; margin-top: 1rem;">
-  <a href="/RCorta3erAniv.gpx" download style="
+  <a href="/posts/aniversario26/downloads/ruta-corta-3er-aniversario.gpx" download style="
     background-color: #0F73C6;
     color: white !important;
     padding: 0.5rem 15vw;

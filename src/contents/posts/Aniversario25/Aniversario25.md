@@ -166,7 +166,7 @@ Te compartimos la ubicación para facilitar tu llegada:
 * Requisitos: Nombre completo y equipo en los casos que aplique. 
 
 <p align="center">
-  <img src="/BCS.png" alt="Bicisport" width="35%"/>
+  <img src="/posts/aniversario25/sponsors/bicisport-morelia.png" alt="Bicisport" width="35%"/>
 </p>
 
 ---
@@ -282,22 +282,22 @@ Te compartimos la ubicación para facilitar tu llegada:
   <div class="carousel-slides">
     <div class="carousel-slide">
       <a href="https://www.cajamorelia.com.mx" target="_blank">
-        <img src="/A.jpg" alt="Caja MV">
+        <img src="/posts/aniversario25/sponsors/caja-mv.jpg" alt="Caja MV">
       </a>
     </div>
     <div class="carousel-slide">
       <a href="https://www.facebook.com/profile.php?id=100063507491055" target="_blank">
-        <img src="/B.jpg" alt="Nova">
+        <img src="/posts/aniversario25/sponsors/nova.jpg" alt="Nova">
       </a>
     </div>
     <div class="carousel-slide">
       <a href="https://www.instagram.com/ruben_guidotattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-        <img src="/C.jpg" alt="Omentes">
+        <img src="/posts/aniversario25/sponsors/omentes.jpg" alt="Omentes">
       </a>
     </div>
         <div class="carousel-slide">
       <a href="https://maps.app.goo.gl/8voTRoAjAVosSDfTA?g_st=awb" target="_blank">
-        <img src="/D.jpg" alt="Cabañas SJ">
+        <img src="/posts/aniversario25/sponsors/cabanas-san-jose.jpg" alt="Cabañas SJ">
       </a>
     </div>
   </div>
@@ -350,22 +350,22 @@ Te compartimos la ubicación para facilitar tu llegada:
   <div class="carousel-slides-1">
     <div class="carousel-slide-1">
       <a href="https://www.instagram.com/dogkeepers/" target="_blank">
-        <img src="/Z1.jpg" alt="DKP">
+        <img src="/posts/aniversario25/collaborators/dkp.jpg" alt="DKP">
       </a>
     </div>
     <div class="carousel-slide-1">
       <a href="https://example.com/dos" target="_blank">
-        <img src="/Z2.jpg" alt="Cuervos">
+        <img src="/posts/aniversario25/collaborators/cuervos.jpg" alt="Cuervos">
       </a>
     </div>
     <div class="carousel-slide-1">
       <a href="https://example.com/tres" target="_blank">
-        <img src="/Z3.jpg" alt="Cuarenta+10">
+        <img src="/posts/aniversario25/collaborators/cuarenta-mas-diez.jpg" alt="Cuarenta+10">
       </a>
     </div>
     <div class="carousel-slide-1">
       <a href="https://example.com/cuatro" target="_blank">
-        <img src="/Z4.jpg" alt="BiciCine">
+        <img src="/posts/aniversario25/collaborators/bicicine.jpg" alt="BiciCine">
       </a>
     </div>
   </div>

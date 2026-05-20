@@ -5,6 +5,8 @@ interface Configuration {
   subTitle: string;
   brandTitle: string;
   countdown?: string;
+  heroLabel?: string;
+  heroBadges?: string[];
 
   description: string;
 
@@ -24,8 +26,6 @@ interface Configuration {
   maxSidebarTagChip: number;
   maxFooterCategoryChip: number;
   maxFooterTagChip: number;
-
-  banners: string[];
 
   slugMode: "HASH" | "RAW";
 
