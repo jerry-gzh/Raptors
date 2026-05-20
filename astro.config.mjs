@@ -7,9 +7,7 @@ import svelte from "@astrojs/svelte";
 import swup from "@swup/astro";
 
 import rehypeSlug from "rehype-slug";
-import rehypeKatex from "rehype-katex";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import remarkMath from "remark-math";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 import RaptorsConfig from "./raptors.config";
@@ -41,10 +39,9 @@ export default defineConfig({
     shikiConfig: {
       theme: "github-dark-default",
     },
-    remarkPlugins: [remarkReadingTime, remarkMath],
+    remarkPlugins: [remarkReadingTime],
     rehypePlugins: [
       rehypeSlug,
-      rehypeKatex,
       [
         rehypeAutolinkHeadings,
         {

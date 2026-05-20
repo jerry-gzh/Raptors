@@ -1,21 +1,13 @@
 import RaptorsConfig from "../../raptors.config";
 import type I18nKeys from "./keys";
-import { en } from "./languages/en";
-import { zh_CN } from "./languages/zh_cn";
-import { es } from "./languages/es"; 
+import { es } from "./languages/es";
 
 export type Translation = {
   [K in I18nKeys]: string;
 };
 
-const map: { [key: string]: Translation } = {
-  en: en,
-  es: es,
-  "zh-cn": zh_CN,
-};
-
 export function getTranslation(lang: string): Translation {
-  return map[lang.toLowerCase()] || en;
+  return lang.toLowerCase() === "es" ? es : es;
 }
 
 export function i18n(key: I18nKeys, ...interpolations: string[]): string {

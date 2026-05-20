@@ -1,5 +1,5 @@
+import { createHash } from "node:crypto";
 import RaptorsConfig from "../../raptors.config";
-import CryptoJS from "crypto-js";
 
 /**
  * Converts a given slug to a hashed slug or returns the raw slug based on the configuration.
@@ -10,8 +10,7 @@ import CryptoJS from "crypto-js";
 export function IdToSlug(slug: string): string {
   switch (RaptorsConfig.slugMode) {
     case "HASH": {
-      const hash = CryptoJS.SHA256(slug);
-      const hasedSlug = hash.toString(CryptoJS.enc.Hex).slice(0, 8);
+      const hasedSlug = createHash("sha256").update(slug).digest("hex").slice(0, 8);
       return hasedSlug;
     }
     case "RAW":
