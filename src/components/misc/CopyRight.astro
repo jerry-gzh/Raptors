@@ -20,8 +20,14 @@ const { title, published, license, author, sourceLink } = Astro.props;
 ---
 
 <div
-  class="fonts relative mt-4 h-32 w-full rounded-lg bg-gray-100 px-4 py-4 lg:h-36 dark:bg-[var(--background-color)]"
+  class="fonts relative mt-4 h-32 w-full overflow-hidden rounded-2xl border border-[var(--border-color)] bg-[var(--card-color-lighten)] px-4 py-4 lg:h-36"
+  style="box-shadow: 0 22px 46px -34px var(--shadow-color);"
 >
+  <div
+    class="absolute inset-0 opacity-90"
+    style="background: radial-gradient(circle at top right, var(--glow-soft) 0, transparent 28%), linear-gradient(135deg, rgba(255,255,255,0.22), transparent 42%);"
+  >
+  </div>
   <div
     class="absolute left-4 top-4 z-10 flex h-24 flex-col justify-between lg:h-28"
   >
@@ -98,7 +104,7 @@ const { title, published, license, author, sourceLink } = Astro.props;
     <Icon
       name="ooui:logo-cc"
       size={230}
-      class="absolute right-0 top-1/2 -translate-y-1/2 text-gray-300 dark:text-[var(--card-color)]"
+      class="absolute right-0 top-1/2 -translate-y-1/2 text-black/10 dark:text-white/5"
     />
   </div>
 </div>

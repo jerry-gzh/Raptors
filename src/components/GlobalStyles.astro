@@ -8,20 +8,27 @@ import "overlayscrollbars/overlayscrollbars.css";
 
 <style is:global>
   :root {
-    --hue: 145;
+    --hue: 48;
 
-    --primary-color: oklch(70% 0.15 var(--hue));
-    --primary-color-lighten: oklch(95% 0.02 var(--hue));
-    --primary-color-hover: oklch(90% 0.025 var(--hue));
-    --primary-color-transparent: oklch(70% 0.15 var(--hue) / 15%);
-    --text-color: oklch(30% 0 0);
-    --text-color-lighten: oklch(50% 0 0);
-    --card-color: oklch(100% 0 0);
-    --card-color-transparent: oklch(100% 0 0 / 85%);
-    --background-color: oklch(97% 0.01 var(--hue));
+    --primary-color: oklch(70% 0.19 var(--hue));
+    --primary-color-lighten: oklch(96% 0.025 var(--hue));
+    --primary-color-hover: oklch(90% 0.05 var(--hue));
+    --primary-color-transparent: oklch(72% 0.16 var(--hue) / 18%);
+    --text-color: oklch(23% 0.02 32);
+    --text-color-lighten: oklch(48% 0.015 32);
+    --card-color: oklch(99% 0.006 60);
+    --card-color-lighten: oklch(96% 0.012 60);
+    --card-color-transparent: oklch(100% 0.006 60 / 74%);
+    --background-color: oklch(95% 0.014 70);
+    --background-color-elevated: oklch(98% 0.012 70);
+    --border-color: oklch(82% 0.025 var(--hue) / 50%);
+    --shadow-color: oklch(44% 0.06 30 / 18%);
+    --glow-strong: oklch(74% 0.22 var(--hue) / 34%);
+    --glow-soft: oklch(76% 0.18 var(--hue) / 18%);
+    --glow-base: oklch(72% 0.15 var(--hue) / 12%);
 
-    --brand-font: "Raleway", "Noto Sans SC", sans-serif;
-    --primary-font: "Noto Sans SC", sans-serif;
+    --brand-font: "Rajdhani", "Manrope", sans-serif;
+    --primary-font: "Manrope", "Noto Sans SC", sans-serif;
     --code-font: "JetBrains Mono", "Fira Code", monospace;
 
     --page-width-lg: 992px;
@@ -38,15 +45,73 @@ import "overlayscrollbars/overlayscrollbars.css";
   }
 
   :root.dark {
-    --primary-color: oklch(70% 0.125 var(--hue));
-    --primary-color-lighten: oklch(40% 0.04 var(--hue));
-    --primary-color-hover: oklch(20% 0.015 var(--hue));
-    --text-color: oklch(95% 0.002 var(--hue));
-    --text-color-lighten: oklch(90% 0.002 var(--hue));
-    --card-color: oklch(25% 0.02 var(--hue));
-    --card-color-lighten: oklch(40% 0.04 var(--hue));
-    --card-color-transparent: oklch(30% 0.025 var(--hue) / 85%);
-    --background-color: oklch(5% 0.015 var(--hue));
+    --primary-color: oklch(76% 0.18 var(--hue));
+    --primary-color-lighten: oklch(21% 0.03 var(--hue));
+    --primary-color-hover: oklch(16% 0.025 var(--hue));
+    --primary-color-transparent: oklch(74% 0.16 var(--hue) / 22%);
+    --text-color: oklch(95% 0.004 40);
+    --text-color-lighten: oklch(76% 0.008 40);
+    --card-color: oklch(16% 0.012 40);
+    --card-color-lighten: oklch(21% 0.018 40);
+    --card-color-transparent: oklch(11% 0.01 40 / 78%);
+    --background-color: oklch(8% 0.01 40);
+    --background-color-elevated: oklch(11% 0.012 40);
+    --border-color: oklch(54% 0.04 var(--hue) / 34%);
+    --shadow-color: oklch(0% 0 0 / 40%);
+    --glow-strong: oklch(74% 0.22 var(--hue) / 24%);
+    --glow-soft: oklch(70% 0.16 var(--hue) / 18%);
+    --glow-base: oklch(72% 0.14 var(--hue) / 10%);
+    color-scheme: dark;
+  }
+
+  html {
+    background: var(--background-color);
+  }
+
+  body {
+    min-height: 100vh;
+    color: var(--text-color);
+    background:
+      radial-gradient(circle at 50% -8%, var(--glow-strong) 0, transparent 42%),
+      radial-gradient(circle at 88% 10%, var(--glow-soft) 0, transparent 28%),
+      radial-gradient(circle at 12% 82%, var(--glow-base) 0, transparent 30%),
+      linear-gradient(
+        135deg,
+        color-mix(in oklab, var(--background-color-elevated) 76%, var(--primary-color) 24%) 0%,
+        var(--background-color) 30%,
+        color-mix(in oklab, var(--background-color) 90%, var(--primary-color) 10%) 100%
+      ),
+      linear-gradient(
+        180deg,
+        var(--background-color-elevated) 0%,
+        var(--background-color) 24%,
+        var(--background-color) 100%
+      );
+    background-attachment: fixed;
+  }
+
+  body::before {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    background-image:
+      linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 47%,
+        var(--border-color) 50%,
+        transparent 53%,
+        transparent 100%
+      );
+    background-size: 24px 24px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent 70%);
+    opacity: 0.25;
+  }
+
+  ::selection {
+    color: oklch(14% 0.015 30);
+    background: var(--primary-color);
   }
 
   .swup-progress-bar {

@@ -72,8 +72,8 @@ if (props.lastPage <= maxVisiblePages) {
 </div>
 <style>
   .button {
-    @apply flex h-10 w-10 flex-row items-center rounded-lg bg-[var(--card-color)] p-1 transition-all hover:brightness-90;
-    @apply dark:bg-[var(--card-color-lighten)] dark:hover:brightness-125;
+    @apply flex h-10 w-10 flex-row items-center rounded-xl border border-[var(--border-color)] bg-[var(--card-color)] p-1 transition-all hover:bg-[var(--primary-color-hover)];
+    box-shadow: 0 16px 30px -24px var(--shadow-color);
   }
 
   .button span {
@@ -81,8 +81,7 @@ if (props.lastPage <= maxVisiblePages) {
   }
 
   .button-disabled {
-    @apply flex h-10 w-10 cursor-not-allowed flex-row items-center rounded-lg bg-gray-200 p-1;
-    @apply dark:bg-[var(--card-color-lighten)] dark:brightness-50;
+    @apply flex h-10 w-10 cursor-not-allowed flex-row items-center rounded-xl border border-[var(--border-color)] bg-[var(--card-color-lighten)] p-1 opacity-60;
   }
 
   .button-disabled span {
@@ -90,7 +89,8 @@ if (props.lastPage <= maxVisiblePages) {
   }
 
   .button-selected {
-    @apply flex h-10 w-10 cursor-not-allowed flex-row items-center rounded-lg bg-[var(--primary-color)] p-1;
+    @apply flex h-10 w-10 cursor-not-allowed flex-row items-center rounded-xl bg-[var(--primary-color)] p-1;
+    box-shadow: 0 16px 30px -18px var(--glow-strong);
     pointer-events: none;
   }
 

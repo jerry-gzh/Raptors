@@ -29,7 +29,8 @@ const { title, subTitle, bannerImage, published } = Astro.props;
 
 <style>
   .article-wrapper {
-    @apply w-full rounded-2xl bg-[var(--card-color)] p-10;
+    @apply w-full rounded-[2rem] border border-[var(--border-color)] bg-[var(--card-color)] p-10;
+    box-shadow: 0 26px 60px -38px var(--shadow-color);
   }
   .article {
     @apply flex flex-col;

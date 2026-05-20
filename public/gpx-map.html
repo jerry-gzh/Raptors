@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa GPX</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <style>
+      html,
+      body,
+      #map {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        font-family: system-ui, sans-serif;
+        background: #f4f5f7;
+      }
+
+      #map {
+        width: 100%;
+      }
+
+      .map-error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: #374151;
+        background: #f3f4f6;
+        text-align: center;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script>
+      const mapElement = document.getElementById("map");
+      const search = new URLSearchParams(window.location.search);
+      const gpxFiles = search.getAll("gpx");
+      const colors = search.getAll("color");
+      const map = L.map("map", { scrollWheelZoom: false });
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; OpenStreetMap contributors",
+      }).addTo(map);
+
+      function showError(message) {
+        map.remove();
+        mapElement.outerHTML = `<div class="map-error">${message}</div>`;
+      }
+
+      function parseTrackPoints(xmlText) {
+        const xml = new DOMParser().parseFromString(xmlText, "application/xml");
+        const points = [...xml.getElementsByTagName("trkpt")]
+          .map((point) => [
+            Number(point.getAttribute("lat")),
+            Number(point.getAttribute("lon")),
+          ])
+          .filter(([lat, lon]) => Number.isFinite(lat) && Number.isFinite(lon));
+        return points;
+      }
+
+      async function loadTracks() {
+        if (!gpxFiles.length) {
+          showError("No se especifico ningun archivo GPX.");
+          return;
+        }
+
+        const bounds = [];
+
+        for (const [index, gpxFile] of gpxFiles.entries()) {
+          const response = await fetch(gpxFile);
+          if (!response.ok) {
+            throw new Error(`No se pudo cargar ${gpxFile}`);
+          }
+
+          const xmlText = await response.text();
+          const points = parseTrackPoints(xmlText);
+
+          if (!points.length) {
+            throw new Error(`El archivo ${gpxFile} no contiene puntos validos.`);
+          }
+
+          const polyline = L.polyline(points, {
+            color: colors[index] || "#2563eb",
+            weight: 4,
+            opacity: 0.9,
+          }).addTo(map);
+
+          bounds.push(polyline.getBounds());
+        }
+
+        const combinedBounds = bounds.reduce((accumulator, currentBounds) => {
+          if (!accumulator) return currentBounds;
+          return accumulator.extend(currentBounds);
+        }, null);
+
+        if (!combinedBounds || !combinedBounds.isValid()) {
+          throw new Error("No fue posible calcular el encuadre del mapa.");
+        }
+
+        map.fitBounds(combinedBounds, { padding: [24, 24] });
+      }
+
+      loadTracks().catch((error) => {
+        showError(error.message);
+      });
+    </script>
+  </body>
+</html>

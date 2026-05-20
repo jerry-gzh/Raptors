@@ -47,9 +47,9 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
     }
     <div class="relative h-[95%] w-full">
       <div
-        class="absolute left-1/2 top-1/2 w-4/5 -translate-x-1/2 -translate-y-1/2 lg:w-3/4"
+        class="absolute left-1/2 top-1/2 w-[88%] -translate-x-1/2 -translate-y-1/2 lg:w-3/4"
       >
-        <div class="flex flex-col">
+        <div class="hero-copy flex flex-col">
           <h1
             class:list={[hasTitle ? "title-normal" : "title-index"]}
             class="title"
@@ -149,13 +149,16 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
   }
 
   .carousel {
-    @apply absolute left-0 top-0 -z-10 block h-[calc(var(--banner-height)*3/4)] w-full overflow-hidden bg-white lg:h-[var(--banner-height)];
+    @apply absolute left-0 top-0 -z-10 block h-[calc(var(--banner-height)*3/4)] w-full overflow-hidden bg-black lg:h-[var(--banner-height)];
     animation-fill-mode: forwards;
   }
 
   .carousel::before {
-    @apply absolute left-0 top-0 z-10 block h-full w-full bg-black/25 transition-all content-[''];
-    @apply dark:bg-black/30;
+    @apply absolute left-0 top-0 z-10 block h-full w-full transition-all content-[''];
+    background:
+      linear-gradient(135deg, rgba(10, 10, 10, 0.82), rgba(10, 10, 10, 0.28)),
+      radial-gradient(circle at 18% 20%, rgba(255, 133, 24, 0.42), transparent 34%),
+      linear-gradient(180deg, rgba(10, 10, 10, 0.08), rgba(10, 10, 10, 0.7));
   }
 
   .carousel .item {
@@ -164,23 +167,36 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
       0s;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    filter: contrast(1.12) saturate(1.04);
   }
 
   .cover {
-    @apply absolute left-0 top-0 z-0 block h-[var(--banner-height)] w-full overflow-hidden bg-white;
+    @apply absolute left-0 top-0 z-0 block h-[var(--banner-height)] w-full overflow-hidden bg-black;
   }
 
   .cover::before {
-    @apply absolute left-0 top-0 z-10 block h-full w-full bg-black/25 transition-all content-[''];
-    @apply dark:bg-black/30;
+    @apply absolute left-0 top-0 z-10 block h-full w-full transition-all content-[''];
+    background:
+      linear-gradient(135deg, rgba(10, 10, 10, 0.82), rgba(10, 10, 10, 0.28)),
+      radial-gradient(circle at 18% 20%, rgba(255, 133, 24, 0.42), transparent 34%),
+      linear-gradient(180deg, rgba(10, 10, 10, 0.08), rgba(10, 10, 10, 0.7));
   }
 
   .cover .item {
     @apply h-full w-full object-cover;
   }
 
+  .hero-copy {
+    @apply mx-auto max-w-4xl rounded-[2rem] border border-white/15 px-6 py-8 backdrop-blur-md lg:px-10 lg:py-10;
+    background:
+      linear-gradient(145deg, rgba(15, 15, 15, 0.76), rgba(15, 15, 15, 0.38)),
+      radial-gradient(circle at top left, rgba(255, 133, 24, 0.24), transparent 38%);
+    box-shadow: 0 30px 80px -44px rgba(0, 0, 0, 0.85);
+  }
+
   .title {
-    @apply mt-8 text-center font-bold text-[var(--title-color)] drop-shadow-lg lg:mt-1;
+    @apply mt-4 text-center font-bold uppercase text-[var(--title-color)] drop-shadow-lg lg:mt-1;
+    letter-spacing: 0.12em;
     font-family: var(--title-font);
   }
 
@@ -193,7 +209,7 @@ const carouselAnimationTime = `${carouselImgsList.length * 6}s`;
   }
 
   .subtitle {
-    @apply text-center text-xl text-[var(--subtitle-color)] drop-shadow-md lg:text-3xl;
+    @apply mt-4 text-center text-lg text-[var(--subtitle-color)] drop-shadow-md lg:text-3xl;
     font-family: var(--subtitle-font);
   }
 

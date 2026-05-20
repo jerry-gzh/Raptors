@@ -16,8 +16,8 @@ const tagKeys = [...tags.keys()];
 <div class="flex w-full flex-row justify-center">
   <div class="flex flex-col space-y-3">
     <div
-      class="onload-animation rounded-3xl bg-[var(--card-color)] p-3"
-      style=`animation-delay: var(--onload-animation-delay);`
+      class="onload-animation rounded-[2rem] border border-[var(--border-color)] bg-[var(--card-color)] p-4"
+      style=`animation-delay: var(--onload-animation-delay); box-shadow: 0 22px 48px -34px var(--shadow-color);`
     >
       <a href="/about" class="avatar-wrapper">
         <img
@@ -140,15 +140,15 @@ const tagKeys = [...tags.keys()];
 </div>
 <style>
   .avatar-wrapper::after {
-    @apply absolute left-3 top-3 h-56 w-56 rounded-xl transition-all content-[''];
+    @apply absolute left-0 top-0 h-56 w-56 rounded-2xl transition-all content-[''];
   }
 
   .avatar-wrapper::after:hover {
-    @apply bg-black/25 dark:bg-black/50;
+    background: linear-gradient(180deg, transparent, rgba(255, 133, 24, 0.24));
   }
 
   .avatar {
-    @apply h-56 w-56 rounded-xl transition-all hover:cursor-pointer;
+    @apply h-56 w-56 rounded-2xl border border-[var(--border-color)] transition-all hover:cursor-pointer;
   }
 
   .username > p {

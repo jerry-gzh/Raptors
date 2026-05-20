@@ -66,7 +66,10 @@
 
 <!-- search bar -->
 <div bind:this={searchBar} class="search-bar hidden lg:block">
-  <div class="bg-black/5 dark:bg-white/5 h-10 rounded-lg flex flex-row">
+  <div
+    class="flex h-10 flex-row rounded-xl border border-[var(--border-color)] bg-black/5 dark:bg-white/5"
+    style="box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);"
+  >
     <label
       for="search-bar-input"
       class="w-10 h-10 flex flex-row justify-center items-center pl-2 pr-1 hover:cursor-text text-gray-400"
@@ -91,6 +94,7 @@
   id="result-pannel"
   bind:this={resultPannel}
   class="max-h-[436px] overflow-y-scroll opacity-0 !absolute h-0 -right-3 w-[28rem] bg-[var(--card-color)] rounded-2xl top-20 transition-all"
+  style="box-shadow: 0 24px 50px -30px var(--shadow-color); border: 1px solid var(--border-color);"
 >
   <div
     class="flex flex-col h-full onload-animation before:content-[''] before:pt-2 after:content-[''] after:pb-2"

@@ -100,9 +100,13 @@
   <!-- search input pannel -->
   <div
     bind:this={searchBar}
-    class="absolute left-1/2 -translate-x-1/2 w-[95%] px-1 flex flex-col h-0 opacity-0 lg:hidden bg-[var(--card-color)] rounded-xl transition-all overflow-hidden before:content-[''] after:content-[''] before:pt-1 after:pb-1"
+    class="absolute left-1/2 flex h-0 w-[95%] -translate-x-1/2 flex-col overflow-hidden rounded-xl bg-[var(--card-color)] px-1 opacity-0 transition-all before:content-[''] before:pt-1 after:content-[''] after:pb-1 lg:hidden"
+    style="box-shadow: 0 24px 50px -30px var(--shadow-color); border: 1px solid var(--border-color);"
   >
-    <div class="bg-black/5 dark:bg-white/5 h-10 rounded-lg flex flex-row">
+    <div
+      class="flex h-10 flex-row rounded-lg border border-[var(--border-color)] bg-black/5 dark:bg-white/5"
+      style="box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);"
+    >
       <label
         for="search-bar-input-mobile"
         class="w-10 h-10 flex flex-row justify-center items-center pl-2 pr-1 hover:cursor-text text-gray-400"
@@ -127,7 +131,8 @@
   <div
     id="result-pannel"
     bind:this={resultPannel}
-    class="max-h-[436px] overflow-y-scroll opacity-0 !absolute left-1/2 -translate-x-1/2 h-0 w-[95%] bg-[var(--card-color)] rounded-2xl top-[3.5rem] transition-all"
+    class="!absolute left-1/2 top-[3.5rem] h-0 max-h-[436px] w-[95%] -translate-x-1/2 overflow-y-scroll rounded-2xl bg-[var(--card-color)] opacity-0 transition-all"
+    style="box-shadow: 0 24px 50px -30px var(--shadow-color); border: 1px solid var(--border-color);"
   >
     <div
       class="flex flex-col h-full onload-animation before:content-[''] before:pt-2 after:content-[''] after:pb-2"

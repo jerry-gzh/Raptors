@@ -26,7 +26,8 @@ const { time, wordCount } = props.readingMetadata;
 ---
 
 <div
-  class="mx-3 flex flex-col rounded-3xl bg-[var(--card-color)] lg:mx-0 lg:h-[212px]"
+  class="group/post mx-3 flex flex-col overflow-hidden rounded-[2rem] border border-[var(--border-color)] bg-[var(--card-color)] lg:mx-0 lg:h-[212px]"
+  style="box-shadow: 0 24px 55px -34px var(--shadow-color);"
 >
   <a
     href={contentUrl}
@@ -40,7 +41,7 @@ const { time, wordCount } = props.readingMetadata;
     <div class="absolute bottom-2 w-full">
       <div class="mx-2 flex flex-row justify-between">
         <div
-          class="flex flex-row items-center space-x-2 rounded-md bg-black/50 px-1.5 py-0.5 text-[var(--primary-color-lighten)] dark:text-[var(--text-color)]"
+          class="flex flex-row items-center space-x-2 rounded-full border border-white/10 bg-black/55 px-2.5 py-1 text-[var(--primary-color-lighten)] dark:text-[var(--text-color)]"
         >
           <Icon name="cuida:calendar-outline" />
           <span class="select-none">
@@ -49,7 +50,7 @@ const { time, wordCount } = props.readingMetadata;
         </div>
         {
           props.category && (
-            <div class="flex flex-row items-center space-x-2 rounded-md bg-black/50 px-1.5 py-0.5 text-[var(--primary-color-lighten)] dark:text-[var(--text-color)]">
+            <div class="flex flex-row items-center space-x-2 rounded-full border border-white/10 bg-black/55 px-2.5 py-1 text-[var(--primary-color-lighten)] dark:text-[var(--text-color)]">
               <Icon name="dashicons:category" />
               <span class="max-w-28 select-none truncate">
                 {props.category}
@@ -62,7 +63,7 @@ const { time, wordCount } = props.readingMetadata;
   </a>
   <div class="flex h-[128px] flex-row lg:h-[212px]">
     <div
-      class="flex w-full flex-col justify-between pb-5 pl-5 pr-6 pt-3 lg:w-[calc(var(--page-width-lg)-404px)] lg:py-7 lg:pr-0 xl:w-[calc(var(--page-width-xl)-676px)]"
+      class="flex w-full flex-col justify-between bg-[linear-gradient(135deg,rgba(255,255,255,0.28),transparent_40%)] pb-5 pl-5 pr-6 pt-3 lg:w-[calc(var(--page-width-lg)-404px)] lg:py-7 lg:pr-0 xl:w-[calc(var(--page-width-xl)-676px)] dark:bg-[linear-gradient(135deg,rgba(255,140,32,0.08),transparent_40%)]"
     >
       <div class="flex w-full flex-row items-center">
         <div
@@ -192,7 +193,10 @@ const { time, wordCount } = props.readingMetadata;
   }
 
   .cover-wrapper::before {
-    @apply absolute left-0 h-full w-0 select-none rounded-r-3xl bg-black opacity-50;
+    @apply absolute left-0 h-full w-0 select-none rounded-r-3xl opacity-90;
+    background:
+      linear-gradient(135deg, rgba(10, 10, 10, 0.84), rgba(255, 133, 24, 0.2)),
+      linear-gradient(90deg, rgba(10, 10, 10, 0.28), rgba(10, 10, 10, 0.7));
     content: "";
     z-index: 1;
     transition: all 0.3s;
