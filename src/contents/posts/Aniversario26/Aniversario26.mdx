@@ -8,6 +8,9 @@ author: Jerry
 draft: false
 ---
 
+import SponsorsShowcase from "../../../components/sections/SponsorsShowcase.astro";
+import { GetAniversario26Sponsors } from "../../../utils/sponsors";
+
 
 <div style="width:100%; margin:0 auto;">
   <iframe
@@ -28,6 +31,8 @@ Nuestra mejor forma de celebrar el aniversario del equipo es haciendo lo que mej
 La rodada de aniversario será el domingo 31 de mayo de 2026, en un circuito con inicio y meta en el *Salón Paseo de la Presa*. Será una rodada de montaña tipo trail - all mountain para celebrar el 3er aniversario de Raptors Morelia.
 
 ¡Prepárate, queda poco tiempo!
+
+<SponsorsShowcase sponsors={GetAniversario26Sponsors()} />
 
 ## 📅 Detalles del evento
 
@@ -181,3 +186,5 @@ Admite ciclistas de nivel intermedio, intermedio a avanzado y avanzado.
 * 👋 17:30 - Fin del evento, agradecimiento y despedida
 
 ⚠️ Nota: los tiempos de ruta pueden modificarse según el ritmo del grupo, las condiciones ambientales, el estado del terreno y cualquier eventualidad durante el recorrido.
+
+

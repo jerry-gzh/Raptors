@@ -4,9 +4,6 @@ import { IdToSlug } from "../../utils/hash";
 import PostLayout from "../../layouts/PostLayout.astro";
 import { render } from "astro:content";
 import { GetCoverURLForUnspecifiedEntry } from "../../utils/cover";
-import { GetCanonicalSlugSource } from "../../utils/hash";
-import SponsorsShowcase from "../../components/sections/SponsorsShowcase.astro";
-import { GetAniversario26Sponsors } from "../../utils/sponsors";
 
 export async function getStaticPaths() {
   const postEntries = await getCollection("posts");
@@ -19,8 +16,6 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const postCover = entry.data.cover ?? GetCoverURLForUnspecifiedEntry(entry.id);
-const isAniversario26Post = GetCanonicalSlugSource(entry.id).toLowerCase() === "aniversario26";
-const aniversario26Sponsors = isAniversario26Post ? GetAniversario26Sponsors() : [];
 ---
 
 {
@@ -41,7 +36,6 @@ const aniversario26Sponsors = isAniversario26Post ? GetAniversario26Sponsors() :
       </div>
       <div data-pagefind-body>
         <Content />
-        {isAniversario26Post && <SponsorsShowcase sponsors={aniversario26Sponsors} />}
       </div>
     </PostLayout>
   )
@@ -67,7 +61,6 @@ const aniversario26Sponsors = isAniversario26Post ? GetAniversario26Sponsors() :
       </div>
       <div data-pagefind-body>
         <Content />
-        {isAniversario26Post && <SponsorsShowcase sponsors={aniversario26Sponsors} />}
       </div>
     </PostLayout>
   )

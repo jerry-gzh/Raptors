@@ -4,6 +4,7 @@ import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
+import mdx from "@astrojs/mdx";
 import swup from "@swup/astro";
 
 import rehypeSlug from "rehype-slug";
@@ -20,6 +21,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     svelte(),
+    mdx(),
     icon(),
     swup({
       theme: false,
