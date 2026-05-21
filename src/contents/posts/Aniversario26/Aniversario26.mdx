@@ -9,7 +9,9 @@ draft: false
 ---
 
 import SponsorsShowcase from "../../../components/sections/SponsorsShowcase.astro";
+import TeamsShowcase from "../../../components/sections/TeamsShowcase.astro";
 import { GetAniversario26Sponsors } from "../../../utils/sponsors";
+import { GetAniversario26Teams } from "../../../utils/teams";
 
 
 <div style="width:100%; margin:0 auto;">
@@ -187,4 +189,4 @@ Admite ciclistas de nivel intermedio, intermedio a avanzado y avanzado.
 
 ⚠️ Nota: los tiempos de ruta pueden modificarse según el ritmo del grupo, las condiciones ambientales, el estado del terreno y cualquier eventualidad durante el recorrido.
 
-
+<TeamsShowcase teams={GetAniversario26Teams()} />
