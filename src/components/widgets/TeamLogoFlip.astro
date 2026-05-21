@@ -5,6 +5,7 @@ interface Props {
   alt: string;
   className?: string;
   imageClass?: string;
+  fit?: "cover" | "contain";
 }
 
 const {
@@ -13,10 +14,16 @@ const {
   alt,
   className = "",
   imageClass = "",
+  fit = "cover",
 } = Astro.props;
 ---
 
-<div class:list={["logo-flip-scene", className]} role="img" aria-label={alt}>
+<div
+  class:list={["logo-flip-scene", className]}
+  role="img"
+  aria-label={alt}
+  data-logo-fit={fit}
+>
   <div class="logo-flip-cube">
     <img
       src={primarySrc}
@@ -59,6 +66,10 @@ const {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     object-fit: cover;
+  }
+
+  .logo-flip-scene[data-logo-fit="contain"] .logo-face {
+    object-fit: contain;
   }
 
   .logo-face-front {

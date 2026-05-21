@@ -20,6 +20,7 @@ Portal web de Raptors Morelia construido con Astro, Tailwind, Svelte y contenido
 ```bash
 pnpm install
 pnpm dev
+pnpm dev --host 0.0.0.0 --port 4321
 pnpm build
 pnpm preview
 pnpm check
@@ -28,9 +29,30 @@ pnpm check
 Qué hace cada uno:
 
 - `pnpm dev`: levanta el entorno local.
+- `pnpm dev --host 0.0.0.0 --port 4321`: levanta el entorno local accesible desde otros dispositivos en la misma red, por ejemplo un celular.
 - `pnpm build`: genera el sitio estático en `dist/` y reconstruye el índice de búsqueda.
 - `pnpm preview`: sirve localmente la versión compilada.
 - `pnpm check`: valida tipos e integración Astro.
+
+## Arranque local
+
+Para iniciar el proyecto en tu máquina:
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Para abrirlo desde tu celular o desde otro equipo en la misma red:
+
+```bash
+pnpm dev --host 0.0.0.0 --port 4321
+```
+
+Normalmente quedará disponible en:
+
+- `http://localhost:4321/`
+- `http://<tu-ip-local>:4321/`
 
 ## Flujo normal de trabajo
 

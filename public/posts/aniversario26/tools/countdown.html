@@ -28,6 +28,10 @@
       }
 
       .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background:
           radial-gradient(circle at top, rgba(255, 220, 160, 0.22), transparent 38%),
           linear-gradient(180deg, #2a1208 0%, #43180a 32%, #8b2509 68%, #ff6a00 100%);
@@ -78,6 +82,36 @@
         box-shadow:
           0 14px 30px rgba(61, 20, 7, 0.32),
           inset 0 1px 0 rgba(255, 214, 170, 0.16);
+      }
+
+      @media (max-width: 640px) {
+        .countdown {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 0.28rem;
+          padding: 0.18rem 0;
+        }
+
+        .item {
+          border-radius: 10px;
+          padding: 0.48rem 0.12rem;
+        }
+
+        .value {
+          font-size: clamp(1.08rem, 4.6vw, 1.32rem);
+        }
+
+        .label {
+          margin-top: 0.18rem;
+          font-size: 0.56rem;
+          letter-spacing: 0.04em;
+        }
+
+        .done {
+          border-radius: 10px;
+          font-size: 0.9rem;
+          padding: 0 0.75rem;
+          text-align: center;
+        }
       }
     </style>
   </head>

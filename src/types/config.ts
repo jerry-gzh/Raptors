@@ -9,6 +9,13 @@ interface Configuration {
   heroBadges?: string[];
 
   description: string;
+  seoKeywords?: string[];
+  seoImage?: string;
+  seoLocation?: {
+    city: string;
+    region: string;
+    country: string;
+  };
 
   site: string;
 

@@ -8,23 +8,18 @@ author: Jerry
 draft: false
 ---
 
-<p align="center">
-  <img
-    src="/posts/aniversario26/media/3ra.jpeg"
-    alt="3° Aniversario Raptors"
-    style="width: 100%; max-width: 960px; height: auto; border-radius: 10px;"
-  />
-</p>
 
 <div style="width:100%; margin:0 auto;">
   <iframe
     src="/posts/aniversario26/tools/countdown.html"
     width="100%"
-    height="140"
+    height="108"
     title="Cuenta regresiva 3° Aniversario Raptors"
-    style="border:0; overflow:hidden; display:block; background:transparent;"
+    style="border:0; overflow:hidden; display:block; background:transparent; margin-bottom:0;"
   ></iframe>
 </div>
+
+<div aria-hidden="true" style="height: 1.75rem;"></div>
 
 # 🚵‍♂️ Rodada de aniversario
 
@@ -102,13 +97,25 @@ Exclusivamente para ciclistas de nivel avanzado.
 
 <div style="display: flex; justify-content: center; margin-top: 1rem;">
   <a href="/posts/aniversario26/downloads/ruta-larga-3er-aniversario.gpx" download style="
-    background-color: #FC3941;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-width: min(100%, 20rem);
+    padding: 0.95rem 1.5rem;
+    background:
+      linear-gradient(135deg, #ff6a54 0%, #fc3941 52%, #c81d25 100%);
     color: white !important;
-    padding: 0.5rem 15vw;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    display: inline-block;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+      0 18px 34px -18px rgba(252, 57, 65, 0.65),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     width: fit-content;
     max-width: 100%;
     box-sizing: border-box;
@@ -134,13 +141,25 @@ Admite ciclistas de nivel intermedio, intermedio a avanzado y avanzado.
 
 <div style="display: flex; justify-content: center; margin-top: 1rem;">
   <a href="/posts/aniversario26/downloads/ruta-corta-3er-aniversario.gpx" download style="
-    background-color: #0F73C6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-width: min(100%, 20rem);
+    padding: 0.95rem 1.5rem;
+    background:
+      linear-gradient(135deg, #32a1ff 0%, #0f73c6 52%, #0a4c84 100%);
     color: white !important;
-    padding: 0.5rem 15vw;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    display: inline-block;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+      0 18px 34px -18px rgba(15, 115, 198, 0.62),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     width: fit-content;
     max-width: 100%;
     box-sizing: border-box;

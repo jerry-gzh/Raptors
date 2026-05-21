@@ -11,16 +11,20 @@ import TeamLogoFlip from "./widgets/TeamLogoFlip.astro";
     style="box-shadow: 0 22px 48px -34px var(--shadow-color);"
   >
     <div class="flex flex-row md:flex-col md:pt-4">
-      <a href="/about" class="relative h-40 w-40 md:hidden">
+      <a href="/about" class="relative h-40 w-[9.5rem] shrink-0 md:hidden">
         <TeamLogoFlip
           primarySrc={RaptorsConfig.avatarUrl}
           secondarySrc={RaptorsConfig.alternateAvatarUrl ?? RaptorsConfig.avatarUrl}
           alt={`Logotipo de ${RaptorsConfig.username}`}
-          className="absolute inset-0 block h-40 w-40 rounded-l-3xl"
-          imageClass="rounded-l-3xl"
+          className="absolute inset-0 block h-40 w-[9.5rem] rounded-l-3xl"
+          imageClass="rounded-l-3xl p-3"
+          fit="contain"
         />
         <div
-          class="absolute right-0 top-0 h-40 w-20 bg-gradient-to-l from-[var(--card-color)]"
+          class="absolute inset-0 rounded-l-3xl"
+          style="background:
+            radial-gradient(circle at 50% 18%, rgba(255, 133, 24, 0.16), transparent 34%),
+            linear-gradient(90deg, rgba(10, 10, 10, 0.04), rgba(10, 10, 10, 0.16));"
         >
         </div>
       </a>
@@ -36,26 +40,29 @@ import TeamLogoFlip from "./widgets/TeamLogoFlip.astro";
           imageClass="rounded-3xl"
         />
       </a>
-      <div class="flex grow flex-col justify-center space-y-4 p-4">
-        <div class="flex flex-col items-center">
+      <div class="flex min-w-0 grow flex-col justify-center space-y-3 px-4 py-3">
+        <div class="flex flex-col items-start">
           <a
             href="/about"
-            class="line-clamp-1 text-xl font-semibold text-[var(--text-color)]"
+            class="line-clamp-1 text-lg font-semibold text-[var(--text-color)]"
           >
             {RaptorsConfig.username}
           </a>
           <span class="mb-2 mt-1 h-1 w-8 rounded-full bg-[var(--primary-color)]"
           ></span>
-          <p class="line-clamp-1 text-[var(--text-color-lighten)]">
+          <p class="line-clamp-2 text-sm leading-snug text-[var(--text-color-lighten)]">
             {RaptorsConfig.sign}
           </p>
         </div>
-        <ul class="flex flex-row items-center justify-center space-x-6">
+        <ul class="grid w-full max-w-[10.5rem] grid-cols-3 gap-2">
           {
             RaptorsConfig.socialLinks.map((item) => (
               <li>
-                <a href={item.link} class="text-[var(--primary-color)]">
-                  <Icon name={item.icon} size={24} />
+                <a
+                  href={item.link}
+                  class="flex h-9 w-9 items-center justify-center rounded-2xl border border-[var(--border-color)] text-[var(--primary-color)] transition-all hover:bg-[var(--primary-color-hover)]"
+                >
+                  <Icon name={item.icon} size={20} />
                 </a>
               </li>
             ))

@@ -4,6 +4,53 @@ import GlobalStyles from "./GlobalStyles.astro";
 import ScriptSetup from "./ScriptSetup.astro";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const seoImage = new URL(
+  RaptorsConfig.seoImage ?? "/site/icons/logo512.png",
+  Astro.site,
+);
+const seoKeywords = RaptorsConfig.seoKeywords?.join(", ");
+const seoLocation = RaptorsConfig.seoLocation ?? {
+  city: "Morelia",
+  region: "Michoacán",
+  country: "México",
+};
+const seoSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SportsOrganization",
+      "@id": `${RaptorsConfig.site}#organization`,
+      name: RaptorsConfig.username,
+      url: RaptorsConfig.site,
+      description: RaptorsConfig.description,
+      sport: ["Mountain biking", "Enduro", "Trail riding"],
+      logo: seoImage.toString(),
+      image: seoImage.toString(),
+      sameAs: RaptorsConfig.socialLinks.map((item) => item.link),
+      areaServed: {
+        "@type": "Place",
+        name: `${seoLocation.city}, ${seoLocation.region}, ${seoLocation.country}`,
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: seoLocation.city,
+        addressRegion: seoLocation.region,
+        addressCountry: seoLocation.country,
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${RaptorsConfig.site}#website`,
+      url: RaptorsConfig.site,
+      name: RaptorsConfig.title,
+      description: RaptorsConfig.description,
+      inLanguage: RaptorsConfig.locale,
+      publisher: {
+        "@id": `${RaptorsConfig.site}#organization`,
+      },
+    },
+  ],
+};
 ---
 
 <!-- Global Metadata -->
@@ -33,6 +80,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <title>{RaptorsConfig.title}</title>
 <meta name="title" content={RaptorsConfig.title} />
 <meta name="description" content={RaptorsConfig.description} />
+<meta name="keywords" content={seoKeywords} />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content={RaptorsConfig.username} />
+<meta name="language" content={RaptorsConfig.locale} />
+<meta name="geo.region" content={`${seoLocation.country}-${seoLocation.region}`} />
+<meta name="geo.placename" content={`${seoLocation.city}, ${seoLocation.region}`} />
+<meta name="ICBM" content={`${seoLocation.city}, ${seoLocation.region}, ${seoLocation.country}`} />
 
 <!-- Iconos -->
 <link rel="icon" type="image/png" sizes="192x192" href="/site/icons/logo192.png" />
@@ -44,14 +98,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={RaptorsConfig.title} />
 <meta property="og:description" content={RaptorsConfig.description} />
-<!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
+<meta property="og:site_name" content={RaptorsConfig.username} />
+<meta property="og:locale" content="es_MX" />
+<meta property="og:image" content={seoImage} />
+<meta property="og:image:alt" content={RaptorsConfig.title} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={RaptorsConfig.title} />
 <meta property="twitter:description" content={RaptorsConfig.description} />
-<!-- <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
+<meta property="twitter:image" content={seoImage} />
+<meta property="twitter:image:alt" content={RaptorsConfig.title} />
 
 <!-- RSS AutoDiscovery -->
 <link
@@ -70,6 +128,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800|noto-sans-sc:400,500,700|rajdhani:500,600,700"
   rel="stylesheet"
 />
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(seoSchema)} />
 
 <GlobalStyles />
 <ScriptSetup />
